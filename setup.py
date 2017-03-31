@@ -8,7 +8,7 @@ from setuphelpers import long_description, git_version, test_command
 setup(
     name="eve-glue",
     version=git_version(),
-    description="One place to hold all constant conversion for ESI to reflect things in EVE",
+    description="eve-glue",
     long_description=long_description(),
     cmdclass=test_command(),
     packages=find_packages(),

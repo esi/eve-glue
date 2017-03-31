@@ -77,6 +77,7 @@ LOCATION_FLAG_TO_ENUM = {
     163: "FighterTube4"
 }
 
+
 def resolve_location_flag_enum(location_flag_id):
     try:
         return LOCATION_FLAG_TO_ENUM[location_flag_id]
