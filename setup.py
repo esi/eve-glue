@@ -14,7 +14,7 @@ setup(
     packages=find_packages(),
     author="Team Tech Co",
     author_email="teamtechco@ccpgames.com",
-    url="",
+    url="https://github.com/ccpgames/eve-glue",
     install_requires=[],
     setup_requires=["setuphelpers"],
     classifiers=[
