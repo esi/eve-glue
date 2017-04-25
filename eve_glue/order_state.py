@@ -9,14 +9,14 @@ ORDER_STATE_TO_ENUM = {
 
 def resolve_order_state_enum(order_state_id):
     """
-    order_state:
+    state:
         type: string
         enum:
-          - open
-          - closed
-          - expired
-          - cancelled
-          - pending
-          - character_deleted
+            - open
+            - closed
+            - expired
+            - cancelled
+            - pending
+            - character_deleted
     """
     return ORDER_STATE_TO_ENUM[order_state_id]
