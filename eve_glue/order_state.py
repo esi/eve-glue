@@ -11,6 +11,7 @@ def resolve_order_state_enum(order_state_id):
     """
     state:
         type: string
+        description: Current order state
         enum:
             - open
             - closed

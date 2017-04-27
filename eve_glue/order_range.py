@@ -17,6 +17,7 @@ def resolve_order_range_enum(order_state_id):
     """
     range:
         type: string
+        description: Valid order range, numbers are ranges in jumps
         enum:
             - station
             - region
