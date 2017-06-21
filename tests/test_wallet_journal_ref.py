@@ -6,6 +6,7 @@ def test_resolve_journal_ref_type():
     assert resolve_journal_ref_type_enum(1) == "player_trading"
     assert resolve_journal_ref_type_enum(233) == "unknown"
 
+
 def test_extra_info():
     assert populate_extra_info(1, "test", 123) == \
         {"location_name": "test", "location_id": 123}
