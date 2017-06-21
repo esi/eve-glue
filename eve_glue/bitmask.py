@@ -3,7 +3,6 @@
 
 def mask_list(mask):
     """Return the list of set bits in a mask as integers."""
-
     set_bits = []
     for position, bit in enumerate(reversed(bin(mask)[2:])):
         if bit == "1":
@@ -13,13 +12,11 @@ def mask_list(mask):
 
 def num_set_bits(mask):
     """Return a count of set bits in a given mask."""
-
     return bin(mask).count("1")
 
 
 def trailing_zero_bits(mask):
     """Return a count of trailing zero bits in the mask."""
-
     # NB: why would anyone care?
     mask_str = bin(mask)
     mask_len = len(mask_str)

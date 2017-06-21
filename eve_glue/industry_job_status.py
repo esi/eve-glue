@@ -7,6 +7,7 @@ JOB_STATUS_TO_ENUM = {
     103: "reverted"
 }
 
+
 def resolve_industry_job_status_enum(status_id):
     """
     status:

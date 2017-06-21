@@ -7,6 +7,7 @@ ORDER_STATE_TO_ENUM = {
     5: "character_deleted"
 }
 
+
 def resolve_order_state_enum(order_state_id):
     """
     state:

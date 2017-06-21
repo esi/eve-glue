@@ -1,4 +1,4 @@
-"""EVE Glue"""
+"""EVE Glue."""
 
 
 from setuptools import setup, find_packages

@@ -13,6 +13,7 @@ ORDER_RANGE_TO_ENUM = {
     40: "40"
 }
 
+
 def resolve_order_range_enum(order_state_id):
     """
     range:
