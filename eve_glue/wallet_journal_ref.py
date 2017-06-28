@@ -84,8 +84,6 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
         type: object
         description: Extra information for different type of transaction
         properties:
-            location_name:
-                type: string
             location_id:
                 type: integer
                 format: int64
@@ -140,7 +138,6 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
             extra_info[to_key] = int(value)
 
     if ref_type_id in [1, 120]:
-        _unpack_str("location_name", arg_name)
         _unpack_int("location_id", arg_value)
     elif ref_type_id == 2:
         _unpack_int("transaction_id", arg_value)

@@ -9,7 +9,7 @@ def test_resolve_journal_ref_type():
 
 def test_extra_info():
     assert populate_extra_info(1, "test", 123) == \
-        {"location_name": "test", "location_id": 123}
+        {"location_id": 123}
     assert populate_extra_info(1, None, None) == {}
 
     assert populate_extra_info(233, "abc", 123) == \
