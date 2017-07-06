@@ -292,8 +292,7 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
     elif ref_type_id in [10, 42, 54, 99, 127, 13, 46, 55, 125, 128]:
         pass
     elif ref_type_id == 17:
-        _unpack_str("npc_name", arg_name)
-        _unpack_int("npc_id", arg_value)
+        _unpack_int("character_id", arg_value)
     elif ref_type_id == 19:
         _unpack_int("destroyed_ship_type_id", arg_name)
     elif ref_type_id in [33, 34, 35, 37, 87, 88]:
