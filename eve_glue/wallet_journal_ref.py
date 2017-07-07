@@ -57,10 +57,13 @@ class JournalRefTypeEnumV2(enum.Enum):
         enum:
             - player_trading
             - market_transaction
+            - gm_cash_transfer
             - mission_reward
             - clone_activation
+            - inheritance
             - player_donation
             - corporation_payment
+            - docking_fee
             - office_rental_fee
             - factory_slot_rental_fee
             - repair_bill
@@ -145,6 +148,7 @@ class JournalRefTypeEnumV2(enum.Enum):
             - planetary_construction
             - corporate_reward_payout
             - bounty_surcharge
+            - contract_reversal
             - corporate_reward_tax
             - store_purchase
             - store_purchase_refund
@@ -162,13 +166,17 @@ class JournalRefTypeEnumV2(enum.Enum):
             - project_discovery_tax
             - reprocessing_tax
             - jump_clone_activation_fee
+            - operation_bonus
     """
     player_trading = 1
     market_transaction = 2
+    gm_cash_transfer = 3
     mission_reward = 7
     clone_activation = 8
+    inheritance = 9
     player_donation = 10
     corporation_payment = 11
+    docking_fee = 12
     office_rental_fee = 13
     factory_slot_rental_fee = 14
     repair_bill = 15
@@ -253,6 +261,7 @@ class JournalRefTypeEnumV2(enum.Enum):
     planetary_construction = 98
     corporate_reward_payout = 99
     bounty_surcharge = 101
+    contract_reversal = 102
     corporate_reward_tax = 103
     store_purchase = 106
     store_purchase_refund = 107
@@ -270,6 +279,7 @@ class JournalRefTypeEnumV2(enum.Enum):
     project_discovery_tax = 126
     reprocessing_tax = 127
     jump_clone_activation_fee = 128
+    operation_bonus = 129
 
 
 def populate_extra_info(ref_type_id, arg_name, arg_value):
