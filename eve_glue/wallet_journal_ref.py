@@ -1,115 +1,55 @@
+import enum
+
+
 JOURNAL_REF_TYPE_TO_ENUM = {
     1: "player_trading",
     2: "market_transaction",
-    7: "mission_reward",
-    8: "clone_activation",
     10: "player_donation",
-    11: "corporation_payment",
     13: "office_rental_fee",
-    14: "factory_slot_rental_fee",
-    15: "repair_bill",
-    16: "bounty",
-    17: "bounty_prize",
+    17: "bounty_prize_historical",
     19: "insurance",
-    20: "mission_expiration",
-    21: "mission_completion",
-    22: "shares",
-    23: "courier_mission_escrow",
-    24: "mission_cost",
-    25: "agent_miscellaneous",
-    26: "lp_store",
-    27: "agent_location_services",
-    28: "agent_donation",
-    29: "agent_security_services",
-    30: "agent_mission_collateral_paid",
-    31: "agent_mission_collateral_refunded",
-    32: "agents_preward",
-    33: "agent_mission_reward",
-    34: "agent_mission_time_bonus_reward",
+    33: "mission_reward",
+    34: "mission_reward_bonus",
     35: "cspa",
-    36: "cspaofflinerefund",
-    37: "corporation_account_withdrawal",
-    38: "corporation_dividend_payment",
-    39: "corporation_registration_fee",
-    40: "corporation_logo_change_cost",
-    41: "release_of_impounded_property",
+    37: "corp_account_withdrawal",
+    40: "logo_change_fee",
     42: "market_escrow",
-    43: "agent_services_rendered",
-    44: "market_fine_paid",
-    45: "corporation_liquidation",
-    46: "brokers_fee",
-    47: "corporation_bulk_payment",
-    48: "alliance_registration_fee",
-    49: "war_fee",
-    50: "alliance_maintainance_fee",
-    51: "contraband_fine",
-    52: "clone_transfer",
-    53: "acceleration_gate_fee",
-    54: "transaction_tax",
+    46: "broker_fee",
+    50: "alliance_maintenance_fee",
+    54: "sales_tax",
     55: "jump_clone_installation_fee",
     56: "manufacturing",
-    57: "researching_technology",
-    58: "researching_time_productivity",
-    59: "researching_material_productivity",
-    60: "copying",
-    62: "reverse_engineering",
-    63: "contract_auction_bid",
-    64: "contract_auction_bid_refund",
-    65: "contract_collateral",
-    66: "contract_reward_refund",
-    67: "contract_auction_sold",
-    68: "contract_reward",
-    69: "contract_collateral_refund",
-    70: "contract_collateral_payout",
-    71: "contract_price",
-    72: "contract_brokers_fee",
-    73: "contract_sales_tax",
-    74: "contract_deposit",
-    75: "contract_deposit_sales_tax",
-    77: "contract_auction_bid_corp",
-    78: "contract_collateral_deposited_corp",
-    79: "contract_price_payment_corp",
-    80: "contract_brokers_fee_corp",
-    81: "contract_deposit_corp",
-    82: "contract_deposit_refund",
-    83: "contract_reward_deposited",
-    84: "contract_reward_deposited_corp",
+    63: "contract",
+    64: "contract",
+    71: "contract",
+    72: "contract",
+    73: "contract",
+    74: "contract",
+    79: "contract",
+    80: "contract",
+    81: "contract",
+    82: "contract",
     85: "bounty_prizes",
-    86: "advertisement_listing_fee",
-    87: "medal_creation",
-    88: "medal_issued",
-    90: "dna_modification_fee",
-    91: "sovereignity_bill",
-    92: "bounty_prize_corporation_tax",
-    93: "agent_mission_reward_corporation_tax",
-    94: "agent_mission_time_bonus_reward_corporation_tax",
-    95: "upkeep_adjustment_fee",
-    96: "planetary_import_tax",
-    97: "planetary_export_tax",
-    98: "planetary_construction",
+    87: "medal_creation_fee",
+    88: "medal_issuing_fee",
+    96: "customs_office_import_duty",
+    97: "customs_office_export_duty",
     99: "corporate_reward_payout",
-    101: "bounty_surcharge",
-    103: "corporate_reward_tax",
-    106: "store_purchase",
-    107: "store_purchase_refund",
-    112: "datacore_fee",
-    113: "war_fee_surrender",
-    114: "war_ally_contract",
-    115: "bounty_reimbursement",
-    116: "kill_right_fee",
-    117: "security_processing_fee",
-    120: "industry_job_tax",
-    122: "infrastructure_hub_maintenance",
-    123: "asset_safety_recovery_tax",
-    124: "opportunity_reward",
+    120: "industry_facility_tax",
     125: "project_discovery_reward",
-    126: "project_discovery_tax",
-    127: "reprocessing_tax",
+    127: "reprocessing_fee",
     128: "jump_clone_activation_fee",
 }
 
 
-def resolve_journal_ref_type_enum(ref_type_id):
+def resolve_journal_ref_type_enum_v1(ref_type_id):
+    """
+    deprecated!!
+    """
+    return JOURNAL_REF_TYPE_TO_ENUM.get(ref_type_id, "unknown")
+
+
+class JournalRefTypeEnumV2(enum.Enum):
     """
     ref_type:
         type: string
@@ -223,7 +163,113 @@ def resolve_journal_ref_type_enum(ref_type_id):
             - reprocessing_tax
             - jump_clone_activation_fee
     """
-    return JOURNAL_REF_TYPE_TO_ENUM.get(ref_type_id, "unknown")
+    player_trading = 1
+    market_transaction = 2
+    mission_reward = 7
+    clone_activation = 8
+    player_donation = 10
+    corporation_payment = 11
+    office_rental_fee = 13
+    factory_slot_rental_fee = 14
+    repair_bill = 15
+    bounty = 16
+    bounty_prize = 17
+    insurance = 19
+    mission_expiration = 20
+    mission_completion = 21
+    shares = 22
+    courier_mission_escrow = 23
+    mission_cost = 24
+    agent_miscellaneous = 25
+    lp_store = 26
+    agent_location_services = 27
+    agent_donation = 28
+    agent_security_services = 29
+    agent_mission_collateral_paid = 30
+    agent_mission_collateral_refunded = 31
+    agents_preward = 32
+    agent_mission_reward = 33
+    agent_mission_time_bonus_reward = 34
+    cspa = 35
+    cspaofflinerefund = 36
+    corporation_account_withdrawal = 37
+    corporation_dividend_payment = 38
+    corporation_registration_fee = 39
+    corporation_logo_change_cost = 40
+    release_of_impounded_property = 41
+    market_escrow = 42
+    agent_services_rendered = 43
+    market_fine_paid = 44
+    corporation_liquidation = 45
+    brokers_fee = 46
+    corporation_bulk_payment = 47
+    alliance_registration_fee = 48
+    war_fee = 49
+    alliance_maintainance_fee = 50
+    contraband_fine = 51
+    clone_transfer = 52
+    acceleration_gate_fee = 53
+    transaction_tax = 54
+    jump_clone_installation_fee = 55
+    manufacturing = 56
+    researching_technology = 57
+    researching_time_productivity = 58
+    researching_material_productivity = 59
+    copying = 60
+    reverse_engineering = 62
+    contract_auction_bid = 63
+    contract_auction_bid_refund = 64
+    contract_collateral = 65
+    contract_reward_refund = 66
+    contract_auction_sold = 67
+    contract_reward = 68
+    contract_collateral_refund = 69
+    contract_collateral_payout = 70
+    contract_price = 71
+    contract_brokers_fee = 72
+    contract_sales_tax = 73
+    contract_deposit = 74
+    contract_deposit_sales_tax = 75
+    contract_auction_bid_corp = 77
+    contract_collateral_deposited_corp = 78
+    contract_price_payment_corp = 79
+    contract_brokers_fee_corp = 80
+    contract_deposit_corp = 81
+    contract_deposit_refund = 82
+    contract_reward_deposited = 83
+    contract_reward_deposited_corp = 84
+    bounty_prizes = 85
+    advertisement_listing_fee = 86
+    medal_creation = 87
+    medal_issued = 88
+    dna_modification_fee = 90
+    sovereignity_bill = 91
+    bounty_prize_corporation_tax = 92
+    agent_mission_reward_corporation_tax = 93
+    agent_mission_time_bonus_reward_corporation_tax = 94
+    upkeep_adjustment_fee = 95
+    planetary_import_tax = 96
+    planetary_export_tax = 97
+    planetary_construction = 98
+    corporate_reward_payout = 99
+    bounty_surcharge = 101
+    corporate_reward_tax = 103
+    store_purchase = 106
+    store_purchase_refund = 107
+    datacore_fee = 112
+    war_fee_surrender = 113
+    war_ally_contract = 114
+    bounty_reimbursement = 115
+    kill_right_fee = 116
+    security_processing_fee = 117
+    industry_job_tax = 120
+    infrastructure_hub_maintenance = 122
+    asset_safety_recovery_tax = 123
+    opportunity_reward = 124
+    project_discovery_reward = 125
+    project_discovery_tax = 126
+    reprocessing_tax = 127
+    jump_clone_activation_fee = 128
 
 
 def populate_extra_info(ref_type_id, arg_name, arg_value):

@@ -1,10 +1,10 @@
-from eve_glue import resolve_journal_ref_type_enum
+from eve_glue import JournalRefTypeEnumV2
 from eve_glue import populate_extra_info
 
 
-def test_resolve_journal_ref_type():
-    assert resolve_journal_ref_type_enum(1) == "player_trading"
-    assert resolve_journal_ref_type_enum(233) == "unknown"
+def test_journal_ref_type_enum():
+    assert JournalRefTypeEnumV2(1).name == "player_trading"
+    assert JournalRefTypeEnumV2(17).name == "bounty_prize"
 
 
 def test_extra_info():
