@@ -350,7 +350,8 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
     elif ref_type_id == 17:
         _unpack_int("character_id", arg_value)
     elif ref_type_id == 19:
-        _unpack_int("destroyed_ship_type_id", arg_name)
+        if int(arg_name) > 0:
+            _unpack_int("destroyed_ship_type_id", arg_name)
     elif ref_type_id in [33, 34, 35, 37, 87, 88]:
         _unpack_int("character_id", arg_value)
     elif ref_type_id == 40:
