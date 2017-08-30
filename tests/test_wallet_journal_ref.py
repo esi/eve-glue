@@ -1,5 +1,5 @@
-from eve_glue import JournalRefTypeEnumV2
 from eve_glue import populate_extra_info
+
 
 def test_extra_info():
     assert populate_extra_info(1, "test", 123) == \
