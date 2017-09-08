@@ -1,166 +1,205 @@
-LOCATION_FLAG_TO_ENUM = {
-    0: "AutoFit",
-    5: "Cargo",
-    174: "CorpseBay",
-    87: "DroneBay",
-    155: "FleetHangar",
-    173: "Deliveries",
-    156: "HiddenModifiers",
-    4: "Hangar",
-    7: "Module",
-    1000: "HangarAll",
-    11: "LoSlot0",
-    12: "LoSlot1",
-    13: "LoSlot2",
-    14: "LoSlot3",
-    15: "LoSlot4",
-    16: "LoSlot5",
-    17: "LoSlot6",
-    18: "LoSlot7",
-    19: "MedSlot0",
-    20: "MedSlot1",
-    21: "MedSlot2",
-    22: "MedSlot3",
-    23: "MedSlot4",
-    24: "MedSlot5",
-    25: "MedSlot6",
-    26: "MedSlot7",
-    27: "HiSlot0",
-    28: "HiSlot1",
-    29: "HiSlot2",
-    30: "HiSlot3",
-    31: "HiSlot4",
-    32: "HiSlot5",
-    33: "HiSlot6",
-    34: "HiSlot7",
-    36: "AssetSafety",
-    63: "Locked",
-    64: "Unlocked",
-    89: "Implant",
-    154: "QuafeBay",
-    92: "RigSlot0",
-    93: "RigSlot1",
-    94: "RigSlot2",
-    95: "RigSlot3",
-    96: "RigSlot4",
-    97: "RigSlot5",
-    98: "RigSlot6",
-    99: "RigSlot7",
-    90: "ShipHangar",
-    133: "SpecializedFuelBay",
-    134: "SpecializedOreHold",
-    135: "SpecializedGasHold",
-    136: "SpecializedMineralHold",
-    137: "SpecializedSalvageHold",
-    138: "SpecializedShipHold",
-    139: "SpecializedSmallShipHold",
-    140: "SpecializedMediumShipHold",
-    141: "SpecializedLargeShipHold",
-    142: "SpecializedIndustrialShipHold",
-    143: "SpecializedAmmoHold",
-    148: "SpecializedCommandCenterHold",
-    149: "SpecializedPlanetaryCommoditiesHold",
-    151: "SpecializedMaterialBay",
-    125: "SubSystemSlot0",
-    126: "SubSystemSlot1",
-    127: "SubSystemSlot2",
-    128: "SubSystemSlot3",
-    129: "SubSystemSlot4",
-    130: "SubSystemSlot5",
-    131: "SubSystemSlot6",
-    132: "SubSystemSlot7",
-    158: "FighterBay",
-    159: "FighterTube0",
-    160: "FighterTube1",
-    161: "FighterTube2",
-    162: "FighterTube3",
-    163: "FighterTube4"
-}
+import enum
 
 
-def resolve_location_flag_enum(location_flag_id):
-    """
-    location_flag:
-        type: string
-        enum:
-            - AutoFit
-            - Cargo
-            - CorpseBay
-            - DroneBay
-            - FleetHangar
-            - Deliveries
-            - HiddenModifiers
-            - Hangar
-            - HangarAll
-            - LoSlot0
-            - LoSlot1
-            - LoSlot2
-            - LoSlot3
-            - LoSlot4
-            - LoSlot5
-            - LoSlot6
-            - LoSlot7
-            - MedSlot0
-            - MedSlot1
-            - MedSlot2
-            - MedSlot3
-            - MedSlot4
-            - MedSlot5
-            - MedSlot6
-            - MedSlot7
-            - HiSlot0
-            - HiSlot1
-            - HiSlot2
-            - HiSlot3
-            - HiSlot4
-            - HiSlot5
-            - HiSlot6
-            - HiSlot7
-            - AssetSafety
-            - Locked
-            - Unlocked
-            - Implant
-            - QuafeBay
-            - RigSlot0
-            - RigSlot1
-            - RigSlot2
-            - RigSlot3
-            - RigSlot4
-            - RigSlot5
-            - RigSlot6
-            - RigSlot7
-            - ShipHangar
-            - SpecializedFuelBay
-            - SpecializedOreHold
-            - SpecializedGasHold
-            - SpecializedMineralHold
-            - SpecializedSalvageHold
-            - SpecializedShipHold
-            - SpecializedSmallShipHold
-            - SpecializedMediumShipHold
-            - SpecializedLargeShipHold
-            - SpecializedIndustrialShipHold
-            - SpecializedAmmoHold
-            - SpecializedCommandCenterHold
-            - SpecializedPlanetaryCommoditiesHold
-            - SpecializedMaterialBay
-            - SubSystemSlot0
-            - SubSystemSlot1
-            - SubSystemSlot2
-            - SubSystemSlot3
-            - SubSystemSlot4
-            - SubSystemSlot5
-            - SubSystemSlot6
-            - SubSystemSlot7
-            - FighterBay
-            - FighterTube0
-            - FighterTube1
-            - FighterTube2
-            - FighterTube3
-            - FighterTube4
-            - Module
-    """  # noqa
-    try:
-        return LOCATION_FLAG_TO_ENUM[location_flag_id]
-    except:
-        return "unknown"
+class PersonalLocationFlagEnumV1(enum.Enum):
+    """Maps location names to IDs."""
+
+    AutoFit = 0
+    Wardrobe = 3
+    Cargo = 5
+    CorpseBay = 174
+    DroneBay = 87
+    FleetHangar = 155
+    Deliveries = 173
+    HiddenModifiers = 156
+    Hangar = 4
+    Module = 7
+    HangarAll = 1000
+    LoSlot0 = 11
+    LoSlot1 = 12
+    LoSlot2 = 13
+    LoSlot3 = 14
+    LoSlot4 = 15
+    LoSlot5 = 16
+    LoSlot6 = 17
+    LoSlot7 = 18
+    MedSlot0 = 19
+    MedSlot1 = 20
+    MedSlot2 = 21
+    MedSlot3 = 22
+    MedSlot4 = 23
+    MedSlot5 = 24
+    MedSlot6 = 25
+    MedSlot7 = 26
+    HiSlot0 = 27
+    HiSlot1 = 28
+    HiSlot2 = 29
+    HiSlot3 = 30
+    HiSlot4 = 31
+    HiSlot5 = 32
+    HiSlot6 = 33
+    HiSlot7 = 34
+    AssetSafety = 36
+    Locked = 63
+    Unlocked = 64
+    Implant = 89
+    QuafeBay = 154
+    RigSlot0 = 92
+    RigSlot1 = 93
+    RigSlot2 = 94
+    RigSlot3 = 95
+    RigSlot4 = 96
+    RigSlot5 = 97
+    RigSlot6 = 98
+    RigSlot7 = 99
+    ShipHangar = 90
+    SpecializedFuelBay = 133
+    SpecializedOreHold = 134
+    SpecializedGasHold = 135
+    SpecializedMineralHold = 136
+    SpecializedSalvageHold = 137
+    SpecializedShipHold = 138
+    SpecializedSmallShipHold = 139
+    SpecializedMediumShipHold = 140
+    SpecializedLargeShipHold = 141
+    SpecializedIndustrialShipHold = 142
+    SpecializedAmmoHold = 143
+    SpecializedCommandCenterHold = 148
+    SpecializedPlanetaryCommoditiesHold = 149
+    SpecializedMaterialBay = 151
+    SubSystemSlot0 = 125
+    SubSystemSlot1 = 126
+    SubSystemSlot2 = 127
+    SubSystemSlot3 = 128
+    SubSystemSlot4 = 129
+    SubSystemSlot5 = 130
+    SubSystemSlot6 = 131
+    SubSystemSlot7 = 132
+    FighterBay = 158
+    FighterTube0 = 159
+    FighterTube1 = 160
+    FighterTube2 = 161
+    FighterTube3 = 162
+    FighterTube4 = 163
+    SubSystemBay = 177
+
+
+class CorporationLocationFlagEnumV1(enum.Enum):
+    """From inventorycommon/const.py:75."""
+
+    AutoFit = 0
+    Wallet = 1
+    OfficeFolder = 2
+    Wardrobe = 3
+    Hangar = 4
+    Cargo = 5
+    Impounded = 6
+    Skill = 7
+    Reward = 8
+    LoSlot0 = 11
+    LoSlot1 = 12
+    LoSlot2 = 13
+    LoSlot3 = 14
+    LoSlot4 = 15
+    LoSlot5 = 16
+    LoSlot6 = 17
+    LoSlot7 = 18
+    MedSlot0 = 19
+    MedSlot1 = 20
+    MedSlot2 = 21
+    MedSlot3 = 22
+    MedSlot4 = 23
+    MedSlot5 = 24
+    MedSlot6 = 25
+    MedSlot7 = 26
+    HiSlot0 = 27
+    HiSlot1 = 28
+    HiSlot2 = 29
+    HiSlot3 = 30
+    HiSlot4 = 31
+    HiSlot5 = 32
+    HiSlot6 = 33
+    HiSlot7 = 34
+    AssetSafety = 36
+    Capsule = 56
+    Pilot = 57
+    SkillInTraining = 61
+    CorpDeliveries = 62
+    Locked = 63
+    Unlocked = 64
+    Bonus = 86
+    DroneBay = 87
+    Booster = 88
+    Implant = 89
+    ShipHangar = 90
+    ShipOffline = 91
+    RigSlot0 = 92
+    RigSlot1 = 93
+    RigSlot2 = 94
+    RigSlot3 = 95
+    RigSlot4 = 96
+    RigSlot5 = 97
+    RigSlot6 = 98
+    RigSlot7 = 99
+    CorpSAG1 = 115
+    CorpSAG2 = 116
+    CorpSAG3 = 117
+    CorpSAG4 = 118
+    CorpSAG5 = 119
+    CorpSAG6 = 120
+    CorpSAG7 = 121
+    SecondaryStorage = 122
+    SubSystemSlot0 = 125  # Electronics
+    SubSystemSlot1 = 126  # Defensive
+    SubSystemSlot2 = 127  # Engineering
+    SubSystemSlot3 = 128  # Offensive
+    SubSystemSlot4 = 129  # Propulsion
+    SubSystemSlot5 = 130  # Unused
+    SubSystemSlot6 = 131  # Unused
+    SubSystemSlot7 = 132  # Unused
+    SpecializedFuelBay = 133
+    SpecializedOreHold = 134
+    SpecializedGasHold = 135
+    SpecializedMineralHold = 136
+    SpecializedSalvageHold = 137
+    SpecializedShipHold = 138
+    SpecializedSmallShipHold = 139
+    SpecializedMediumShipHold = 140
+    SpecializedLargeShipHold = 141
+    SpecializedIndustrialShipHold = 142
+    SpecializedAmmoHold = 143
+    StructureActive = 144
+    StructureInactive = 145
+    JunkyardReprocessed = 146
+    JunkyardTrashed = 147
+    SpecializedCommandCenterHold = 148
+    SpecializedPlanetaryCommoditiesHold = 149
+    PlanetSurface = 150
+    SpecializedMaterialBay = 151
+    DustDatabank = 152
+    DustBattle = 153
+    QuafeBay = 154
+    FleetHangar = 155
+    HiddenModifers = 156
+    StructureOffline = 157
+    FighterBay = 158
+    FighterTube0 = 159
+    FighterTube1 = 160
+    FighterTube2 = 161
+    FighterTube3 = 162
+    FighterTube4 = 163
+    ServiceSlot0 = 164
+    ServiceSlot1 = 165
+    ServiceSlot2 = 166
+    ServiceSlot3 = 167
+    ServiceSlot4 = 168
+    ServiceSlot5 = 169
+    ServiceSlot6 = 170
+    ServiceSlot7 = 171
+    StructureFuel = 172
+    Deliveries = 173
+    CrateLoot = 174
+    CorpseBay = 174
+    BoosterBay = 176
+    SubsystemBay = 177
+    HangarAll = 1000
