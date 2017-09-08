@@ -171,3 +171,9 @@ NOTIFICATION_TYPE_TO_ENUM = {
     3001: NPCStandingsLost,
     3002: NPCStandingsGained,
 }
+
+def resolve_notification_type_enum(notification_type_id):
+    try:
+        return NOTIFICATION_TYPE_TO_ENUM[notification_type_id]
+    except:
+        return "unknown"
