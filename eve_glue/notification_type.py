@@ -1,179 +1,174 @@
-NOTIFICATION_TYPE_TO_ENUM = {
-    1: OldLscMessages,
-    2: CharTerminationMsg,
-    3: CharMedalMsg,
-    4: AllMaintenanceBillMsg,
-    5: AllWarDeclaredMsg,
-    6: AllWarSurrenderMsg,
-    7: AllWarRetractedMsg,
-    8: AllWarInvalidatedMsg,
-    10: CorpAllBillMsg,
-    11: BillOutOfMoneyMsg,
-    13: BillPaidCorpAllMsg,
-    14: BountyClaimMsg,
-    15: CloneActivationMsg,
-    16: CorpAppNewMsg,
-    17: CorpAppRejectMsg,
-    18: CorpAppAcceptMsg,
-    19: CorpTaxChangeMsg,
-    20: CorpNewsMsg,
-    21: CharLeftCorpMsg,
-    22: CorpNewCEOMsg,
-    23: CorpDividendMsg,
-    25: CorpVoteMsg,
-    26: CorpVoteCEORevokedMsg,
-    27: CorpWarDeclaredMsg,
-    28: CorpWarFightingLegalMsg,
-    29: CorpWarSurrenderMsg,
-    30: CorpWarRetractedMsg,
-    31: CorpWarInvalidatedMsg,
-    32: ContainerPasswordMsg,
-    33: CustomsMsg,
-    34: InsuranceFirstShipMsg,
-    35: InsurancePayoutMsg,
-    36: InsuranceInvalidatedMsg,
-    38: SovCorpClaimFailMsg,
-    40: SovCorpBillLateMsg,
-    41: SovAllClaimLostMsg,
-    43: SovAllClaimAquiredMsg,
-    45: AllAnchoringMsg,
-    46: AllStructVulnerableMsg,
-    47: AllStrucInvulnerableMsg,
-    48: SovDisruptorMsg,
-    49: CorpStructLostMsg,
-    50: CorpOfficeExpirationMsg,
-    51: CloneRevokedMsg1,
-    52: CloneMovedMsg,
-    53: CloneRevokedMsg2,
-    54: InsuranceExpirationMsg,
-    55: InsuranceIssuedMsg,
-    56: JumpCloneDeletedMsg1,
-    57: JumpCloneDeletedMsg2,
-    58: FWCorpJoinMsg,
-    59: FWCorpLeaveMsg,
-    60: FWCorpKickMsg,
-    61: FWCharKickMsg,
-    62: FWCorpWarningMsg,
-    63: FWCharWarningMsg,
-    64: FWCharRankLossMsg,
-    65: FWCharRankGainMsg,
-    67: TransactionReversalMsg,
-    68: ReimbursementMsg,
-    69: LocateCharMsg,
-    70: ResearchMissionAvailableMsg,
-    71: MissionOfferExpirationMsg,
-    72: MissionTimeoutMsg,
-    73: StoryLineMissionAvailableMsg,
-    74: TutorialMsg,
-    75: TowerAlertMsg,
-    76: TowerResourceAlertMsg,
-    77: StationAggressionMsg1,
-    78: StationStateChangeMsg,
-    79: StationConquerMsg,
-    80: StationAggressionMsg2,
-    81: FacWarCorpJoinRequestMsg,
-    82: FacWarCorpLeaveRequestMsg,
-    83: FacWarCorpJoinWithdrawMsg,
-    84: FacWarCorpLeaveWithdrawMsg,
-    85: CorpLiquidationMsg,
-    86: SovereigntyTCUDamageMsg,
-    87: SovereigntySBUDamageMsg,
-    88: SovereigntyIHDamageMsg,
-    89: ContactAdd,
-    90: ContactEdit,
-    91: IncursionCompletedMsg,
-    92: CorpKicked,
-    93: OrbitalAttacked,
-    94: OrbitalReinforced,
-    95: OwnershipTransferred,
-    96: FWAllianceWarningMsg,
-    97: FWAllianceKickMsg,
-    98: AllWarCorpJoinedAllianceMsg,
-    99: AllyJoinedWarDefenderMsg,
-    100: AllyJoinedWarAggressorMsg,
-    101: AllyJoinedWarAllyMsg,
-    102: MercOfferedNegotiationMsg,
-    103: WarSurrenderOfferMsg,
-    104: WarSurrenderDeclinedMsg,
-    105: FacWarLPPayoutKill,
-    106: FacWarLPPayoutEvent,
-    107: FacWarLPDisqualifiedEvent,
-    108: FacWarLPDisqualifiedKill,
-    109: AllyContractCancelled,
-    110: WarAllyOfferDeclinedMsg,
-    111: BountyYourBountyClaimed,
-    112: BountyPlacedChar,
-    113: BountyPlacedCorp,
-    114: BountyPlacedAlliance,
-    115: KillRightAvailable,
-    116: KillRightAvailableOpen,
-    117: KillRightEarned,
-    118: KillRightUsed,
-    119: KillRightUnavailable,
-    120: KillRightUnavailableOpen,
-    121: DeclareWar,
-    122: OfferedSurrender,
-    123: AcceptedSurrender,
-    124: MadeWarMutual,
-    125: RetractsWar,
-    126: OfferedToAlly,
-    127: AcceptedAlly,
-    128: CharAppAcceptMsg,
-    129: CharAppRejectMsg,
-    130: CharAppWithdrawMsg,
-    131: DustAppAcceptedMsg,
-    132: DistrictAttacked,
-    133: BattlePunishFriendlyFire,
-    134: BountyESSTaken,
-    135: BountyESSShared,
-    136: IndustryTeamAuctionWon,
-    137: IndustryTeamAuctionLost,
-    138: CloneActivationMsg2,
-    139: CorpAppInvitedMsg,
-    140: KillReportVictim,
-    141: KillReportFinalBlow,
-    142: CorpAppRejectCustomMsg,
-    143: CorpFriendlyFireEnableTimerStarted,
-    144: CorpFriendlyFireDisableTimerStarted,
-    145: CorpFriendlyFireEnableTimerCompleted,
-    146: CorpFriendlyFireDisableTimerCompleted,
-    147: EntosisCaptureStarted,
-    148: StationServiceEnabled,
-    149: StationServiceDisabled,
-    152: InfrastructureHubBillAboutToExpire,
-    160: SovStructureReinforced,
-    161: SovCommandNodeEventStarted,
-    162: SovStructureDestroyed,
-    163: SovStationEnteredFreeport,
-    164: IHubDestroyedByBillFailure,
-    165: AllianceCapitalChanged,
-    166: BuddyConnectContactAdd,
-    167: SovStructureSelfDestructRequested,
-    168: SovStructureSelfDestructCancel,
-    169: SovStructureSelfDestructFinished,
-    181: StructureFuelAlert,
-    182: StructureAnchoring,
-    183: StructureUnanchoring,
-    184: StructureUnderAttack,
-    185: StructureOnline,
-    186: StructureLostShields,
-    187: StructureLostArmor,
-    188: StructureDestroyed,
-    198: StructureServicesOffline,
-    199: StructureItemsDelivered,
-    200: SeasonalChallengeCompleted,
-    201: StructureCourierContractChanged,
-    1012: OperationFinished,
-    1022: GiftReceived,
-    1030: GameTimeReceived,
-    1031: GameTimeSent,
-    1032: GameTimeAdded,
-    3001: NPCStandingsLost,
-    3002: NPCStandingsGained,
-}
+import enum
 
-def resolve_notification_type_enum(notification_type_id):
-    try:
-        return NOTIFICATION_TYPE_TO_ENUM[notification_type_id]
-    except:
-        return "unknown"
+class NotificationTypeEnum(enum.Enum):
+    OldLscMessages = 1
+    CharTerminationMsg = 2
+    CharMedalMsg = 3
+    AllMaintenanceBillMsg = 4
+    AllWarDeclaredMsg = 5
+    AllWarSurrenderMsg = 6
+    AllWarRetractedMsg = 7
+    AllWarInvalidatedMsg = 8
+    CorpAllBillMsg = 10
+    BillOutOfMoneyMsg = 11
+    BillPaidCorpAllMsg = 13
+    BountyClaimMsg = 14
+    CloneActivationMsg = 15
+    CorpAppNewMsg = 16
+    CorpAppRejectMsg = 17
+    CorpAppAcceptMsg = 18
+    CorpTaxChangeMsg = 19
+    CorpNewsMsg = 20
+    CharLeftCorpMsg = 21
+    CorpNewCEOMsg = 22
+    CorpDividendMsg = 23
+    CorpVoteMsg = 25
+    CorpVoteCEORevokedMsg = 26
+    CorpWarDeclaredMsg = 27
+    CorpWarFightingLegalMsg = 28
+    CorpWarSurrenderMsg = 29
+    CorpWarRetractedMsg = 30
+    CorpWarInvalidatedMsg = 31
+    ContainerPasswordMsg = 32
+    CustomsMsg = 33
+    InsuranceFirstShipMsg = 34
+    InsurancePayoutMsg = 35
+    InsuranceInvalidatedMsg = 36
+    SovCorpClaimFailMsg = 38
+    SovCorpBillLateMsg = 40
+    SovAllClaimLostMsg = 41
+    SovAllClaimAquiredMsg = 43
+    AllAnchoringMsg = 45
+    AllStructVulnerableMsg = 46
+    AllStrucInvulnerableMsg = 47
+    SovDisruptorMsg = 48
+    CorpStructLostMsg = 49
+    CorpOfficeExpirationMsg = 50
+    CloneRevokedMsg1 = 51
+    CloneMovedMsg = 52
+    CloneRevokedMsg2 = 53
+    InsuranceExpirationMsg = 54
+    InsuranceIssuedMsg = 55
+    JumpCloneDeletedMsg1 = 56
+    JumpCloneDeletedMsg2 = 57
+    FWCorpJoinMsg = 58
+    FWCorpLeaveMsg = 59
+    FWCorpKickMsg = 60
+    FWCharKickMsg = 61
+    FWCorpWarningMsg = 62
+    FWCharWarningMsg = 63
+    FWCharRankLossMsg = 64
+    FWCharRankGainMsg = 65
+    TransactionReversalMsg = 67
+    ReimbursementMsg = 68
+    LocateCharMsg = 69
+    ResearchMissionAvailableMsg = 70
+    MissionOfferExpirationMsg = 71
+    MissionTimeoutMsg = 72
+    StoryLineMissionAvailableMsg = 73
+    TutorialMsg = 74
+    TowerAlertMsg = 75
+    TowerResourceAlertMsg = 76
+    StationAggressionMsg1 = 77
+    StationStateChangeMsg = 78
+    StationConquerMsg = 79
+    StationAggressionMsg2 = 80
+    FacWarCorpJoinRequestMsg = 81
+    FacWarCorpLeaveRequestMsg = 82
+    FacWarCorpJoinWithdrawMsg = 83
+    FacWarCorpLeaveWithdrawMsg = 84
+    CorpLiquidationMsg = 85
+    SovereigntyTCUDamageMsg = 86
+    SovereigntySBUDamageMsg = 87
+    SovereigntyIHDamageMsg = 88
+    ContactAdd = 89
+    ContactEdit = 90
+    IncursionCompletedMsg = 91
+    CorpKicked = 92
+    OrbitalAttacked = 93
+    OrbitalReinforced = 94
+    OwnershipTransferred = 95
+    FWAllianceWarningMsg = 96
+    FWAllianceKickMsg = 97
+    AllWarCorpJoinedAllianceMsg = 98
+    AllyJoinedWarDefenderMsg = 99
+    AllyJoinedWarAggressorMsg = 100
+    AllyJoinedWarAllyMsg = 101
+    MercOfferedNegotiationMsg = 102
+    WarSurrenderOfferMsg = 103
+    WarSurrenderDeclinedMsg = 104
+    FacWarLPPayoutKill = 105
+    FacWarLPPayoutEvent = 106
+    FacWarLPDisqualifiedEvent = 107
+    FacWarLPDisqualifiedKill = 108
+    AllyContractCancelled = 109
+    WarAllyOfferDeclinedMsg = 110
+    BountyYourBountyClaimed = 111
+    BountyPlacedChar = 112
+    BountyPlacedCorp = 113
+    BountyPlacedAlliance = 114
+    KillRightAvailable = 115
+    KillRightAvailableOpen = 116
+    KillRightEarned = 117
+    KillRightUsed = 118
+    KillRightUnavailable = 119
+    KillRightUnavailableOpen = 120
+    DeclareWar = 121
+    OfferedSurrender = 122
+    AcceptedSurrender = 123
+    MadeWarMutual = 124
+    RetractsWar = 125
+    OfferedToAlly = 126
+    AcceptedAlly = 127
+    CharAppAcceptMsg = 128
+    CharAppRejectMsg = 129
+    CharAppWithdrawMsg = 130
+    DustAppAcceptedMsg = 131
+    DistrictAttacked = 132
+    BattlePunishFriendlyFire = 133
+    BountyESSTaken = 134
+    BountyESSShared = 135
+    IndustryTeamAuctionWon = 136
+    IndustryTeamAuctionLost = 137
+    CloneActivationMsg2 = 138
+    CorpAppInvitedMsg = 139
+    KillReportVictim = 140
+    KillReportFinalBlow = 141
+    CorpAppRejectCustomMsg = 142
+    CorpFriendlyFireEnableTimerStarted = 143
+    CorpFriendlyFireDisableTimerStarted = 144
+    CorpFriendlyFireEnableTimerCompleted = 145
+    CorpFriendlyFireDisableTimerCompleted = 146
+    EntosisCaptureStarted = 147
+    StationServiceEnabled = 148
+    StationServiceDisabled = 149
+    InfrastructureHubBillAboutToExpire = 152
+    SovStructureReinforced = 160
+    SovCommandNodeEventStarted = 161
+    SovStructureDestroyed = 162
+    SovStationEnteredFreeport = 163
+    IHubDestroyedByBillFailure = 164
+    AllianceCapitalChanged = 165
+    BuddyConnectContactAdd = 166
+    SovStructureSelfDestructRequested = 167
+    SovStructureSelfDestructCancel = 168
+    SovStructureSelfDestructFinished = 169
+    StructureFuelAlert = 181
+    StructureAnchoring = 182
+    StructureUnanchoring = 183
+    StructureUnderAttack = 184
+    StructureOnline = 185
+    StructureLostShields = 186
+    StructureLostArmor = 187
+    StructureDestroyed = 188
+    StructureServicesOffline = 198
+    StructureItemsDelivered = 199
+    SeasonalChallengeCompleted = 200
+    StructureCourierContractChanged = 201
+    OperationFinished = 1012
+    GiftReceived = 1022
+    GameTimeReceived = 1030
+    GameTimeSent = 1031
+    GameTimeAdded = 1032
+    NPCStandingsLost = 3001
+    NPCStandingsGained = 3002
