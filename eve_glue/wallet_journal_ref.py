@@ -341,7 +341,7 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
         if value is not None:
             extra_info[to_key] = int(value)
 
-    if ref_type_id in [1, 120]:
+    if ref_type_id in [1]:
         _unpack_int("location_id", arg_value)
     elif ref_type_id == 2:
         _unpack_int("transaction_id", arg_value)
@@ -358,7 +358,7 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
         _unpack_int("corporation_id", arg_value)
     elif ref_type_id == 50:
         _unpack_int("alliance_id", arg_value)
-    elif ref_type_id == 56:
+    elif ref_type_id in [56, 120]:
         _unpack_int("job_id", arg_name)
     elif ref_type_id in range(63, 85):
         _unpack_int("contract_id", arg_name)
