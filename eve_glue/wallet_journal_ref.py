@@ -359,7 +359,7 @@ def populate_extra_info(ref_type_id, arg_name, arg_value):
     elif ref_type_id == 50:
         _unpack_int("alliance_id", arg_value)
     elif ref_type_id in [56, 120]:
-        _unpack_int("job_id", arg_name)
+        _unpack_int("job_id", arg_value)
     elif ref_type_id in range(63, 85):
         _unpack_int("contract_id", arg_name)
     elif ref_type_id == 85:
