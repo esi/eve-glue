@@ -1,4 +1,6 @@
 import enum
+from eve_glue.bitmask import mask_list
+
 
 class CorpRolesEnum(enum.Enum):
     """Map of role name to role bit."""
@@ -53,3 +55,16 @@ class CorpRolesEnum(enum.Enum):
     Fitting_Manager = 576460752303423488
     Terrestrial_Combat_Officer = 1152921504606846976
     Terrestrial_Logistics_Officer = 2305843009213693952
+
+
+def calc_roles_from_mask(mask):
+    """Return a list of role names from a roles mask."""
+
+    roles = []
+    for role in mask_list(mask):
+        try:
+            roles.append(CorpRolesEnum(role).name)
+        except ValueError:
+            pass
+
+    return roles
