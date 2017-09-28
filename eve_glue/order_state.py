@@ -7,18 +7,4 @@ ORDER_STATE_TO_ENUM = {
     5: "character_deleted"
 }
 
-
-def resolve_order_state_enum(order_state_id):
-    """
-    state:
-        type: string
-        description: Current order state
-        enum:
-            - open
-            - closed
-            - expired
-            - cancelled
-            - pending
-            - character_deleted
-    """
-    return ORDER_STATE_TO_ENUM[order_state_id]
+ORDER_STATE_DICT = { v:k for k,v in ORDER_STATE_TO_ENUM.items()}
