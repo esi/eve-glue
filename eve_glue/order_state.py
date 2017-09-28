@@ -1,4 +1,4 @@
-ORDER_STATE_TO_ENUM = {
+ORDER_STATE_DICT = {
     0: "open",
     1: "closed",
     2: "expired",
@@ -6,5 +6,3 @@ ORDER_STATE_TO_ENUM = {
     4: "pending",
     5: "character_deleted"
 }
-
-ORDER_STATE_DICT = { v:k for k,v in ORDER_STATE_TO_ENUM.items()}

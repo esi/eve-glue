@@ -1,4 +1,4 @@
-ORDER_RANGE_TO_ENUM = {
+ORDER_RANGE_DICT = {
     32767: "region",
     -1: "station",
     0: "solarsystem",
@@ -12,6 +12,3 @@ ORDER_RANGE_TO_ENUM = {
     30: "30",
     40: "40"
 }
-
-
-ORDER_RANGE_DICT = { v:k for k,v in ORDER_RANGE_TO_ENUM.items()}
