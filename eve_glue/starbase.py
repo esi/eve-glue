@@ -1,5 +1,5 @@
 STARBASE_STATE_DICT = {
-    0: "unanchored",
+    0: "unanchoring",
     1: "offline",
     2: "onlining",
     3: "reinforced",
