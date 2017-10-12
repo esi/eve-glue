@@ -6,3 +6,4 @@ from eve_glue.wallet_journal_ref import resolve_journal_ref_type_enum_v1  # noqa
 from eve_glue.wallet_journal_ref import JournalRefTypeEnumV2  # noqa
 from eve_glue.wallet_journal_ref import populate_extra_info  # noqa
 from eve_glue.notification_type import NotificationTypeEnum # noqa
+from eve_glue.containers import ActionsEnumV1, PasswordTypeEnumV1  # noqa
