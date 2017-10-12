@@ -172,3 +172,8 @@ class NotificationTypeEnum(enum.Enum):
     GameTimeAdded = 1032
     NPCStandingsLost = 3001
     NPCStandingsGained = 3002
+    notificationTypeMoonminingExtractionStarted = 202
+    MoonminingExtractionCancelled= 203
+    MoonminingExtractionFinished= 204
+    MoonminingLaserFired = 205
+    MoonminingAutomaticFracture = 206
