@@ -10,7 +10,7 @@ class ActionsEnumV1(enum.Enum):
     move = 4
     set_password = 5
     add = 6
-    Lock = 7
+    lock = 7
     unlock = 8
     enter_password = 9
     configure = 10
