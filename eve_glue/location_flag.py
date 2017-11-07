@@ -1,3 +1,6 @@
+"""Helpers for location IDs."""
+
+
 import enum
 
 
@@ -65,7 +68,7 @@ class PersonalLocationFlagEnumV1(enum.Enum):
     SpecializedIndustrialShipHold = 142
     SpecializedAmmoHold = 143
     SpecializedCommandCenterHold = 148
-    SpecializedPlanetaryCommoditiesHold = 149
+    SpecializedPlanetaryCommoditiesHold = 149  # pylint: disable=invalid-name
     SpecializedMaterialBay = 151
     SubSystemSlot0 = 125
     SubSystemSlot1 = 126
@@ -173,7 +176,7 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     JunkyardReprocessed = 146
     JunkyardTrashed = 147
     SpecializedCommandCenterHold = 148
-    SpecializedPlanetaryCommoditiesHold = 149
+    SpecializedPlanetaryCommoditiesHold = 149  # pylint: disable=invalid-name
     PlanetSurface = 150
     SpecializedMaterialBay = 151
     DustDatabank = 152

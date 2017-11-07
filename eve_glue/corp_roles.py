@@ -1,3 +1,6 @@
+"""Helpers for corporation roles."""
+
+
 import enum
 from eve_glue.bitmask import mask_list
 

@@ -1,3 +1,6 @@
+"""Helpers for determining the state of an order."""
+
+
 ORDER_STATE_DICT = {
     0: "open",
     1: "closed",

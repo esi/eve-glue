@@ -1,6 +1,12 @@
+"""Helpers for character notifications."""
+
+
 import enum
 
+
 class NotificationTypeEnum(enum.Enum):
+    """Maps notification type IDs to names."""
+
     OldLscMessages = 1
     CharTerminationMsg = 2
     CharMedalMsg = 3
@@ -135,14 +141,14 @@ class NotificationTypeEnum(enum.Enum):
     KillReportVictim = 140
     KillReportFinalBlow = 141
     CorpAppRejectCustomMsg = 142
-    CorpFriendlyFireEnableTimerStarted = 143
-    CorpFriendlyFireDisableTimerStarted = 144
-    CorpFriendlyFireEnableTimerCompleted = 145
-    CorpFriendlyFireDisableTimerCompleted = 146
+    CorpFriendlyFireEnableTimerStarted = 143  # pylint: disable=invalid-name
+    CorpFriendlyFireDisableTimerStarted = 144  # pylint: disable=invalid-name
+    CorpFriendlyFireEnableTimerCompleted = 145  # pylint: disable=invalid-name
+    CorpFriendlyFireDisableTimerCompleted = 146  # pylint: disable=invalid-name
     EntosisCaptureStarted = 147
     StationServiceEnabled = 148
     StationServiceDisabled = 149
-    InfrastructureHubBillAboutToExpire = 152
+    InfrastructureHubBillAboutToExpire = 152  # pylint: disable=invalid-name
     SovStructureReinforced = 160
     SovCommandNodeEventStarted = 161
     SovStructureDestroyed = 162
@@ -150,9 +156,9 @@ class NotificationTypeEnum(enum.Enum):
     IHubDestroyedByBillFailure = 164
     AllianceCapitalChanged = 165
     BuddyConnectContactAdd = 166
-    SovStructureSelfDestructRequested = 167
+    SovStructureSelfDestructRequested = 167  # pylint: disable=invalid-name
     SovStructureSelfDestructCancel = 168
-    SovStructureSelfDestructFinished = 169
+    SovStructureSelfDestructFinished = 169  # pylint: disable=invalid-name
     StructureFuelAlert = 181
     StructureAnchoring = 182
     StructureUnanchoring = 183
@@ -172,8 +178,8 @@ class NotificationTypeEnum(enum.Enum):
     GameTimeAdded = 1032
     NPCStandingsLost = 3001
     NPCStandingsGained = 3002
-    notificationTypeMoonminingExtractionStarted = 202
-    MoonminingExtractionCancelled= 203
-    MoonminingExtractionFinished= 204
+    notificationTypeMoonminingExtractionStarted = 202  # noqa pylint: disable=invalid-name
+    MoonminingExtractionCancelled = 203
+    MoonminingExtractionFinished = 204
     MoonminingLaserFired = 205
     MoonminingAutomaticFracture = 206

@@ -1,3 +1,6 @@
+"""Helpers for determining the distance an order is visible."""
+
+
 ORDER_RANGE_DICT = {
     32767: "region",
     -1: "station",

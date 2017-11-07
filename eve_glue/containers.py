@@ -1,3 +1,6 @@
+"""Helpers for audit log secure containers."""
+
+
 import enum
 
 
