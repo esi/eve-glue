@@ -16,7 +16,7 @@ class PersonalLocationFlagEnumV1(enum.Enum):
     Deliveries = 173
     HiddenModifiers = 156
     Hangar = 4
-    Module = 7
+    Skill = 7
     HangarAll = 1000
     LoSlot0 = 11
     LoSlot1 = 12
