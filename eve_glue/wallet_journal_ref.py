@@ -160,6 +160,7 @@ class JournalRefTypeEnumV2(enum.Enum):
     reprocessing_tax = 127
     jump_clone_activation_fee = 128
     operation_bonus = 129
+    reaction = 135
 
 
 def populate_extra_info(ref_type_id, arg_name, arg_value):
