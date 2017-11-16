@@ -160,6 +160,10 @@ class JournalRefTypeEnumV2(enum.Enum):
     reprocessing_tax = 127
     jump_clone_activation_fee = 128
     operation_bonus = 129
+    resource_wars_reward = 131
+    duel_wager_escrow = 132
+    duel_wager_payment = 133
+    duel_wager_refund = 134
     reaction = 135
 
 
