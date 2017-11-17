@@ -15,7 +15,6 @@ setup(
     author="Team Tech Co",
     author_email="teamtechco@ccpgames.com",
     url="https://github.com/ccpgames/eve-glue",
-    install_requires=[],
     setup_requires=["setuphelpers"],
     classifiers=[
         "Development Status :: 3 - Alpha",
