@@ -7,5 +7,5 @@ ORDER_STATE_DICT = {
     2: "expired",
     3: "cancelled",
     4: "pending",
-    5: "character_deleted"
+    5: "character_deleted",
 }

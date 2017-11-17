@@ -7,5 +7,5 @@ JOB_STATUS_TO_ENUM = {
     3: "ready",
     101: "delivered",
     102: "cancelled",
-    103: "reverted"
+    103: "reverted",
 }
