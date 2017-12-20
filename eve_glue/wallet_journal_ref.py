@@ -167,6 +167,15 @@ class JournalRefTypeEnumV2(enum.Enum):
     reaction = 135
 
 
+WALLET_JOURNAL_OWNER_TYPE_NAMES = [
+    "character",
+    "corporation",
+    "alliance",
+    "faction",
+    "system"
+]
+
+
 def populate_extra_info(ref_type_id, arg_name, arg_value):
     """Populate the extra_info dictionary for this ref type."""
 
