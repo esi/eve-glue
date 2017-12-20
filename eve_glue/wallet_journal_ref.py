@@ -1,48 +1,6 @@
 """Helpers for wallet journals."""
 
-
 import enum
-
-
-JOURNAL_REF_TYPE_TO_ENUM = {
-    1: "player_trading",
-    2: "market_transaction",
-    10: "player_donation",
-    13: "office_rental_fee",
-    17: "bounty_prize_historical",
-    19: "insurance",
-    33: "mission_reward",
-    34: "mission_reward_bonus",
-    35: "cspa",
-    37: "corp_account_withdrawal",
-    40: "logo_change_fee",
-    42: "market_escrow",
-    46: "broker_fee",
-    50: "alliance_maintenance_fee",
-    54: "sales_tax",
-    55: "jump_clone_installation_fee",
-    56: "manufacturing",
-    63: "contract",
-    64: "contract",
-    71: "contract",
-    72: "contract",
-    73: "contract",
-    74: "contract",
-    79: "contract",
-    80: "contract",
-    81: "contract",
-    82: "contract",
-    85: "bounty_prizes",
-    87: "medal_creation_fee",
-    88: "medal_issuing_fee",
-    96: "customs_office_import_duty",
-    97: "customs_office_export_duty",
-    99: "corporate_reward_payout",
-    120: "industry_facility_tax",
-    125: "project_discovery_reward",
-    127: "reprocessing_fee",
-    128: "jump_clone_activation_fee",
-}
 
 
 class JournalRefTypeEnumV2(enum.Enum):
