@@ -266,7 +266,7 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     DustBattle = 153
     QuafeBay = 154
     FleetHangar = 155
-    HiddenModifers = 156
+    HiddenModifiers = 156
     StructureOffline = 157
     FighterBay = 158
     FighterTube0 = 159
@@ -287,5 +287,5 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     CrateLoot = 174
     CorpseBay = 174
     BoosterBay = 176
-    SubsystemBay = 177
+    SubSystemBay = 177
     HangarAll = 1000
