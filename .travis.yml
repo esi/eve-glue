@@ -1,0 +1,39 @@
+language: python
+python:
+- '3.6'
+env:
+- TOXENV=python3.6
+- TOXENV=pylint
+- TOXENV=flake8
+before_install:
+- pip install -U coveralls pip pytest pytest-cov setuptools setuphelpers wheel tox
+script:
+- tox -- --no-teamcity
+after_success:
+- coveralls
+before_deploy:
+- python setup.py build sdist bdist_wheel
+notifications:
+  slack:
+    secure: aaVY93ScucIoQfx7H9fjmUjs6nHhgg6B8oJzsOlNaXlr7gxYhEoYdGJ2+3HJkXLGkwOB+kuAZ/YBbL/7yTMgAVRUvUnMeqwjVZ0H13WpT9OqvNbfnV5LIYwKsrEXM842jaxj3f8KtLMiSbphxxoI+PtwIwcOA9L+Kdw/xPMuypjrj736xCrBvqohCO+MMw8oSjIyXyy5AQTPF9WzKjEpxPotfAnKycY8Qy9MXBsCzU+ENAbqC8EUXSVLkzcq1CUQLww8dT3e9WGly8Yuasxs+w7xt6HcLupNS8DA5fAfv9bVBkKd21R1bVRmG4DWRD3qd/TmaL+lPVCE5RB90gOtGdrY9FrYEKnodq5P4Kn2Fc/ks/8pf0qbgTxCcI15AK1/KS9JSpVcIGuGOgzII7i8HQgmUrhzzhhnqrB5PgyP4w17J7K6CYb1F3teYit5xVpQn0KXloZ7xNsdaGW84QhD/hSV4L6f9UU7eVQXN9kBDkjL8kc/f1M0YYidqmFRWwp7MgdEPChRakjInh/CTPpJIB4lsUHOCgUVdIS5k4KV2d8HL7zSIrmMn4qEaj4z8MKOIAPNiihJ2okri54SVBp5h6q+VXw3KanUAlRwTVGrbkNzA/aMTAUDwg8BsmemDSeaGH7L2N4UeVbz7e1K4FWDKKrHiXdQnYoTCVj3I6oOx8A=
+deploy:
+- provider: pypi
+  user: atal
+  skip_cleanup: true
+  distributions: sdist bdist_wheel
+  password:
+   secure: eALMLYDPoB14SpXYirLVotb7YDptXci+O6t6vrTK1mCAQSNHnollR82hFviE7NZEZwiTIwTOpXJNYufbFQTgSBDPefW1gcHogifeIUAaFMJh5xPQA9tLsmoW2MMNPx2uJF98jNvpZAkzYe5dFo/Zf2M6vSc2DuCOO1pV5O+ms/+1KNkbCA2XmNQveKeOQNeaVutKaVTf2Brjx1sK7396bjC5pGV38yzdo0TZWlbH3EF35Gvint5KL0rVrBlH6w65GTX+/kK4LQ2WJNU4N8TRTmKiaavwaZ5cHGWrU1B4esy2BHloeTEMVshXdReyRY9nuF6TiLsy/gHwGZQxkQA3IyyGQViWLyvMJeZWdF+5UdUFzKRe0ZVPsQH4De+tKa5iJBeTspGFWWP6h8dZCXJP1o97/bXUbKDPQMn2gJjAcfbJfpBhRj/t1t6oevSAH5p3ELZuIPVs3OwBNkEapIArQSPFNGl0rnRNbUZ+xPxtIdY/G4HFr/n31YFuRGeozmeAPCZ9UlER/nTwJZ08T/+/HC+Qv6KhIwOguLD+NKYTtE7xagYjyqmwlifgZoMyXm9iHRNTT6LSXGQ/OlvCUbcgiJM7H7WAs1OAR7/YvB4wb2DOwI/KOCw0YjEHbkgUHp40z1XN+3nBPSEFdW0nt77ExuEOApY7vfCBnazjq/mc85M=
+  on:
+    tags: true
+    repo: ccpgames/eve-glue
+    condition: "$TOXENV = python3.6"
+- provider: releases
+  api_key:
+    secure: Jlovlm5bAB94gikGdl5GPlAe1waLSBBfCOBOmjP8nawWQQLXXt2REHyYzPfVt0EkyA2ZQo3MwtdvPnGLUy2UOg+043mUvnyJvcR4QsMdXuJJXNvE4g38L1zs3tGHOTcslhPEZdpJT5wJomMcYRuR0DIAlKa5PgunYVTU38ezsr4nMmtQNg3C7eENZSjU7rYGAWGOtePljOAC4P8xM8p9fYdkdjnJ/cxX4vCvJDSBdbYq/Cmffv91N5IElWVoqL7W2GT0WAmdMD62C0/TR6kq1GzODLwGSF60cImB192MWeRqaknF+a5ctUTu89zLgVjoB0pGstg7+Yyoxtf5WqU/GZ/Te7aLbnosNm8SoqzghkCfppn3rZBjJ14L1y5efJ+/6QhpeJyGW3KotMDl1rkuCo/F9K4EXSpMk/lK92ogT1VRvjWtqZy2/jI0zmheSihfbdctajWBqSK/T6XyFTbqnGX40mB/hDqWZqIkffoEnSLnUFjujALRnzV9DXJP/ZTNbsIq5x/uCfer13riIhXT2D6tROFx9IzLVQhjM+Tbbsv7ZuJ4VbadCGK6eyFp5FrqnmQTL7mGXt8yjI7ClSZXYabgiIGPe5QFdnMA2WDDhRWBH0zmpFlkCg/ACbKrakccOTTW7adngv6lsFf2WhYxevMXjPxl+FonC5aYhQ4gllA=
+  file: "/home/travis/build/ccpgames/eve-glue/dist/*.whl"
+  file_glob: true
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: ccpgames/eve-glue
+    condition: "$TOXENV = python3.6"
