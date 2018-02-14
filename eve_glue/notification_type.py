@@ -3,6 +3,8 @@
 
 import enum
 
+from eve_glue.enums import new_from_enum
+
 
 class NotificationTypeEnum(enum.Enum):
     """Maps notification type IDs to names."""
@@ -183,3 +185,14 @@ class NotificationTypeEnum(enum.Enum):
     MoonminingExtractionFinished = 204
     MoonminingLaserFired = 205
     MoonminingAutomaticFracture = 206
+
+
+NotificationTypeEnumV2 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV2",
+    NotificationTypeEnum,
+    add={
+        "StructureWentLowPower": 207,
+        "StructureWentHighPower": 208,
+        "StructuresReinforcementChanged": 209
+    }
+)

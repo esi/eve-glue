@@ -3,6 +3,8 @@
 
 import enum
 
+from eve_glue.enums import new_from_enum
+
 
 class PersonalLocationFlagEnumV1(enum.Enum):
     """Maps location names to IDs."""
@@ -266,7 +268,7 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     DustBattle = 153
     QuafeBay = 154
     FleetHangar = 155
-    HiddenModifiers = 156
+    HiddenModifers = 156
     StructureOffline = 157
     FighterBay = 158
     FighterTube0 = 159
@@ -287,5 +289,16 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     CrateLoot = 174
     CorpseBay = 174
     BoosterBay = 176
-    SubSystemBay = 177
+    SubsystemBay = 177
     HangarAll = 1000
+
+
+CorporationLocationFlagEnumV2 = new_from_enum(  # pylint: disable=invalid-name
+    "CorporationLocationFlagEnumV2",
+    CorporationLocationFlagEnumV1,
+    remove=["HiddenModifers", "SubsystemBay"],
+    add={
+        "HiddenModifiers": 156,
+        "SubSystemBay": 177
+    }
+)
