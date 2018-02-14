@@ -10,7 +10,7 @@ setup(
     version=git_version(),
     description="eve-glue",
     long_description=long_description(),
-    cmdclass=test_command(),
+    cmdclass=test_command(cover="eve_glue"),
     packages=find_packages(),
     author="Team Tech Co",
     author_email="teamtechco@ccpgames.com",
