@@ -14,14 +14,12 @@ def test_new_from_enum():
     class A(enum.Enum):
         Thing = "Stuff"
         Other = "Thing"
-        AddReplace = True
 
     B = enums.new_from_enum(
         "B",
         A,
-        replace={"Thing": "Changed"},
         remove=["Other"],
-        add={"foo": "bar", "AddReplace": False},
+        add={"Thing": "Changed", "foo": "bar"},
     )
 
     with pytest.raises(AttributeError):
@@ -29,4 +27,3 @@ def test_new_from_enum():
 
     assert B.Thing.value == "Changed"
     assert B.foo.value == "bar"
-    assert B.AddReplace.value is False

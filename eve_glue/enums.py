@@ -4,24 +4,22 @@
 import enum
 
 
-def new_from_enum(name: str, existing: enum.Enum, replace: dict = None,
-                  remove: list = None, add: dict = None) -> (enum.Enum):
+def new_from_enum(name: str, existing: enum.Enum, remove: list = None,
+                  add: dict = None) -> (enum.Enum):
     """Create a new enum from an existing enum.
 
     Args:
         name: string name of the new enum
         existing: an existing enum to base from
-        replace: dictionary of {name: value} of members to replace
         remove: list of member keys to remove
-        add: dictionary of {name: value} of members to add
+        add: dictionary of {name: value} of members to add or replace
 
     Returns:
         a copy of the existing enum, with modifications
     """
 
     remove = remove or []
-    replace = replace or {}
-
+    replace = {}
     additions = []
     names = [x.name for x in existing]
     for key, value in (add or {}).items():
