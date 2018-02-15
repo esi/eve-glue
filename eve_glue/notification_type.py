@@ -190,7 +190,9 @@ class NotificationTypeEnum(enum.Enum):
 NotificationTypeEnumV2 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV2",
     NotificationTypeEnum,
+    remove=["notificationTypeMoonminingExtractionStarted"],
     add={
+        "MoonminingExtractionStarted": 202,
         "StructureWentLowPower": 207,
         "StructureWentHighPower": 208,
         "StructuresReinforcementChanged": 209
