@@ -12,3 +12,4 @@ from eve_glue.notification_type import NotificationTypeEnum  # noqa
 from eve_glue.notification_type import NotificationTypeEnumV2  # noqa
 from eve_glue.containers import ActionsEnumV1, PasswordTypeEnumV1  # noqa
 from eve_glue.poco import StructureStateEnumV1  # noqa
+from eve_glue.faction_warfare import SystemContestationState  # noqa
