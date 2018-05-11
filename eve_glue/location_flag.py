@@ -72,10 +72,10 @@ class PersonalLocationFlagEnumV1(enum.Enum):
     SpecializedCommandCenterHold = 148
     SpecializedPlanetaryCommoditiesHold = 149  # pylint: disable=invalid-name
     SpecializedMaterialBay = 151
-    SubSystemSlot0 = 125
-    SubSystemSlot1 = 126
-    SubSystemSlot2 = 127
-    SubSystemSlot3 = 128
+    SubSystemSlot0 = 125  # Core
+    SubSystemSlot1 = 126  # Defensive
+    SubSystemSlot2 = 127  # Offensive
+    SubSystemSlot3 = 128  # Propulsion
     SubSystemSlot4 = 129
     SubSystemSlot5 = 130
     SubSystemSlot6 = 131
@@ -135,10 +135,10 @@ class PersonalLocationFlagEnumV2(enum.Enum):
     RigSlot5 = 97
     RigSlot6 = 98
     RigSlot7 = 99
-    SubSystemSlot0 = 125
-    SubSystemSlot1 = 126
-    SubSystemSlot2 = 127
-    SubSystemSlot3 = 128
+    SubSystemSlot0 = 125  # Core
+    SubSystemSlot1 = 126  # Defensive
+    SubSystemSlot2 = 127  # Offensive
+    SubSystemSlot3 = 128  # Propulsion
     SubSystemSlot4 = 129
     SubSystemSlot5 = 130
     SubSystemSlot6 = 131
@@ -237,11 +237,11 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     CorpSAG6 = 120
     CorpSAG7 = 121
     SecondaryStorage = 122
-    SubSystemSlot0 = 125  # Electronics
+    SubSystemSlot0 = 125  # Core
     SubSystemSlot1 = 126  # Defensive
-    SubSystemSlot2 = 127  # Engineering
-    SubSystemSlot3 = 128  # Offensive
-    SubSystemSlot4 = 129  # Propulsion
+    SubSystemSlot2 = 127  # Offensive
+    SubSystemSlot3 = 128  # Propulsion
+    SubSystemSlot4 = 129  # Unused
     SubSystemSlot5 = 130  # Unused
     SubSystemSlot6 = 131  # Unused
     SubSystemSlot7 = 132  # Unused
