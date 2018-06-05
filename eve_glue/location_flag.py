@@ -86,6 +86,7 @@ class PersonalLocationFlagEnumV1(enum.Enum):
     FighterTube2 = 161
     FighterTube3 = 162
     FighterTube4 = 163
+    BoosterBay = 176
     SubSystemBay = 177
 
 
@@ -168,6 +169,7 @@ class PersonalLocationFlagEnumV2(enum.Enum):
     FighterTube4 = 163
     Deliveries = 173
     CorpseBay = 174
+    BoosterBay = 176
     SubSystemBay = 177
     HangarAll = 1000
 
