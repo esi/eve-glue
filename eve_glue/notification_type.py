@@ -195,6 +195,7 @@ NotificationTypeEnumV2 = new_from_enum(  # pylint: disable=invalid-name
         "MoonminingExtractionStarted": 202,
         "StructureWentLowPower": 207,
         "StructureWentHighPower": 208,
-        "StructuresReinforcementChanged": 209
-    }
+        "StructuresReinforcementChanged": 209,
+        "StructureItemsMovedToSafety": 190,
+    },
 )
