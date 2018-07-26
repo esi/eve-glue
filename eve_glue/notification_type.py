@@ -200,6 +200,7 @@ NotificationTypeEnumV2 = new_from_enum(  # pylint: disable=invalid-name
     },
 )
 
+
 NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV3",
     NotificationTypeEnumV2,
