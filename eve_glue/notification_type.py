@@ -199,3 +199,13 @@ NotificationTypeEnumV2 = new_from_enum(  # pylint: disable=invalid-name
         "StructureItemsMovedToSafety": 190,
     },
 )
+
+
+NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV3",
+    NotificationTypeEnumV2,
+    add={
+        "StructuresJobsPaused": 210,
+        "StructuresJobsCancelled": 211,
+    }
+)
