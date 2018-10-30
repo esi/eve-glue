@@ -6,7 +6,7 @@ import enum
 from eve_glue.enums import new_from_enum
 
 
-class NotificationTypeEnum(enum.Enum):
+class NotificationTypeEnumV2(enum.Enum):
     """Maps notification type IDs to names."""
 
     OldLscMessages = 1
@@ -169,6 +169,7 @@ class NotificationTypeEnum(enum.Enum):
     StructureLostShields = 186
     StructureLostArmor = 187
     StructureDestroyed = 188
+    StructureItemsMovedToSafety = 190
     StructureServicesOffline = 198
     StructureItemsDelivered = 199
     SeasonalChallengeCompleted = 200
@@ -180,25 +181,14 @@ class NotificationTypeEnum(enum.Enum):
     GameTimeAdded = 1032
     NPCStandingsLost = 3001
     NPCStandingsGained = 3002
-    notificationTypeMoonminingExtractionStarted = 202  # noqa pylint: disable=invalid-name
+    MoonminingExtractionStarted = 202
     MoonminingExtractionCancelled = 203
     MoonminingExtractionFinished = 204
     MoonminingLaserFired = 205
     MoonminingAutomaticFracture = 206
-
-
-NotificationTypeEnumV2 = new_from_enum(  # pylint: disable=invalid-name
-    "NotificationTypeEnumV2",
-    NotificationTypeEnum,
-    remove=["notificationTypeMoonminingExtractionStarted"],
-    add={
-        "MoonminingExtractionStarted": 202,
-        "StructureWentLowPower": 207,
-        "StructureWentHighPower": 208,
-        "StructuresReinforcementChanged": 209,
-        "StructureItemsMovedToSafety": 190,
-    },
-)
+    StructureWentLowPower = 207
+    StructureWentHighPower = 208
+    StructuresReinforcementChanged = 209
 
 
 NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
@@ -207,5 +197,14 @@ NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "StructuresJobsPaused": 210,
         "StructuresJobsCancelled": 211,
+    }
+)
+
+NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV4",
+    NotificationTypeEnumV3,
+    add={
+        "CombatOperationFinished": 1013,
+        "IndustryOperationFinished": 1014
     }
 )
