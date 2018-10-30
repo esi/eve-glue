@@ -200,7 +200,7 @@ NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     }
 )
 
-NotificationTypeEnumV4 = new_from_enum(  # pyling: disable=invalid-name
+NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV4",
     NotificationTypeEnumV3,
     add={
