@@ -1,6 +1,7 @@
 """Helpers for wallet journals."""
 
 import enum
+from eve_glue.enums import new_from_enum
 
 
 class JournalRefTypeEnumV2(enum.Enum):
@@ -123,6 +124,15 @@ class JournalRefTypeEnumV2(enum.Enum):
     duel_wager_payment = 133
     duel_wager_refund = 134
     reaction = 135
+
+
+JournalRefTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
+    "JournalRefTypeEnumV3",
+    JournalRefTypeEnumV2,
+    add={
+        "structure_gate_jump": 140
+    }
+)
 
 
 def populate_extra_info(ref_type_id, arg_name, arg_value):
