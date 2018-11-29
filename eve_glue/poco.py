@@ -1,5 +1,6 @@
 """Helpers for player owned customs offices (poco)."""
 import enum
+from eve_glue.enums import new_from_enum
 
 
 class StructureStateEnumV1(enum.Enum):
@@ -17,3 +18,12 @@ class StructureStateEnumV1(enum.Enum):
     hull_reinforce = 113
     hull_vulnerable = 114
     anchor_vulnerable = 115
+
+
+StructureStateEnumV2 = new_from_enum(  # pylint: disable=invalid-name
+    "StructureStateEnumV2",
+    StructureStateEnumV1,
+    add={
+        "deploy_vulnerable": 116
+    }
+)
