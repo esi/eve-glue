@@ -8,6 +8,7 @@ from eve_glue.location_flag import PersonalLocationFlagEnumV1  # noqa
 from eve_glue.location_flag import PersonalLocationFlagEnumV2  # noqa
 from eve_glue.location_flag import CorporationLocationFlagEnumV1  # noqa
 from eve_glue.location_flag import CorporationLocationFlagEnumV2  # noqa
+from eve_glue.location_flag import FittingLocationFlagEnumV1  # noqa
 from eve_glue.wallet_journal_ref import JournalRefTypeEnumV2  # noqa
 from eve_glue.wallet_journal_ref import populate_extra_info  # noqa
 from eve_glue.notification_type import NotificationTypeEnumV2  # noqa

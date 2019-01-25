@@ -295,6 +295,52 @@ class CorporationLocationFlagEnumV1(enum.Enum):
     HangarAll = 1000
 
 
+class FittingLocationFlagEnumV1(enum.Enum):
+    """
+    Maps location names to IDs.
+    Only contains flags that are valid
+    in a ship or structure fitting.
+    """
+    Cargo = 5
+    LoSlot0 = 11
+    LoSlot1 = 12
+    LoSlot2 = 13
+    LoSlot3 = 14
+    LoSlot4 = 15
+    LoSlot5 = 16
+    LoSlot6 = 17
+    LoSlot7 = 18
+    MedSlot0 = 19
+    MedSlot1 = 20
+    MedSlot2 = 21
+    MedSlot3 = 22
+    MedSlot4 = 23
+    MedSlot5 = 24
+    MedSlot6 = 25
+    MedSlot7 = 26
+    HiSlot0 = 27
+    HiSlot1 = 28
+    HiSlot2 = 29
+    HiSlot3 = 30
+    HiSlot4 = 31
+    HiSlot5 = 32
+    HiSlot6 = 33
+    HiSlot7 = 34
+    DroneBay = 87
+    RigSlot0 = 92
+    RigSlot1 = 93
+    RigSlot2 = 94
+    FighterBay = 158
+    ServiceSlot0 = 164
+    ServiceSlot1 = 165
+    ServiceSlot2 = 166
+    ServiceSlot3 = 167
+    ServiceSlot4 = 168
+    ServiceSlot5 = 169
+    ServiceSlot6 = 170
+    ServiceSlot7 = 171
+
+
 CorporationLocationFlagEnumV2 = new_from_enum(  # pylint: disable=invalid-name
     "CorporationLocationFlagEnumV2",
     CorporationLocationFlagEnumV1,
