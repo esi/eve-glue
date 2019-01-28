@@ -301,6 +301,7 @@ class FittingLocationFlagEnumV1(enum.Enum):
     Only contains flags that are valid
     in a ship or structure fitting.
     """
+    Invalid = None
     Cargo = 5
     LoSlot0 = 11
     LoSlot1 = 12
@@ -330,6 +331,10 @@ class FittingLocationFlagEnumV1(enum.Enum):
     RigSlot0 = 92
     RigSlot1 = 93
     RigSlot2 = 94
+    SubSystemSlot0 = 125
+    SubSystemSlot1 = 126
+    SubSystemSlot2 = 127
+    SubSystemSlot3 = 128
     FighterBay = 158
     ServiceSlot0 = 164
     ServiceSlot1 = 165
