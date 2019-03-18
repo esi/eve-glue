@@ -134,6 +134,15 @@ JournalRefTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     }
 )
 
+JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
+    "JournalRefTypeEnumV4",
+    JournalRefTypeEnumV3,
+    add={
+        "skill_purchase": 141,
+        "item_trader_payment": 142
+    }
+)
+
 
 def populate_extra_info(ref_type_id, arg_name, arg_value):
     """Populate the extra_info dictionary for this ref type."""
