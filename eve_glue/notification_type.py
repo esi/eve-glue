@@ -208,3 +208,15 @@ NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "IndustryOperationFinished": 1014
     }
 )
+
+NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV5",
+    NotificationTypeEnumV4,
+    add={
+        "CorpBecameWarEligible": 221,
+        "CorpNoLongerWarEligible": 222,
+        "WarHQRemovedFromSpace": 223,
+        "CorpWarDeclaredV2": 224,
+        "AllianceWarDeclaredV2": 225,
+    }
+)
