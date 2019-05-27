@@ -57,8 +57,6 @@ class CorpRolesEnum(enum.Enum):
     Starbase_Defense_Operator = 144115188075855872
     Starbase_Fuel_Technician = 288230376151711744
     Fitting_Manager = 576460752303423488
-    Terrestrial_Combat_Officer = 1152921504606846976
-    Terrestrial_Logistics_Officer = 2305843009213693952
 
 
 def calc_roles_from_mask(mask):
