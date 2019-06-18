@@ -220,7 +220,8 @@ NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
         "AllianceWarDeclaredV2": 225,
     }
 )
- NotificationTypeEnumV6 = new_from_enum(  # pylint: disable=invalid-name
+
+NotificationTypeEnumV6 = new_from_enum(  # pylint: disable=invalid-name
      "NotificationTypeEnumV6",
      NotificationTypeEnumV5,
      add={
