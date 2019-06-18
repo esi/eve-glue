@@ -222,21 +222,21 @@ NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
 )
 
 NotificationTypeEnumV6 = new_from_enum(  # pylint: disable=invalid-name
-     "NotificationTypeEnumV6",
-     NotificationTypeEnumV5,
-     add={
-         "InvasionSystemLogin": 226,
-         "MutualWarInviteSent": 229,
-         "MutualWarInviteRejected": 230,
-         "MutualWarInviteAccepted": 231,
-         "WarDeclared": 232,
-         "WarAdopted ": 233,
-         "MutualWarExpired": 234,
-         "WarInherited": 235,
-         "WarAllyInherited": 236,
-         "WarConcordInvalidates": 237,
-         "WarRetracted": 238,
-         "WarRetractedByConcord": 239,
-         "WarInvalid": 240,
-     }
- )
+    "NotificationTypeEnumV6",
+    NotificationTypeEnumV5,
+    add={
+        "InvasionSystemLogin": 226,
+        "MutualWarInviteSent": 229,
+        "MutualWarInviteRejected": 230,
+        "MutualWarInviteAccepted": 231,
+        "WarDeclared": 232,
+        "WarAdopted ": 233,
+        "MutualWarExpired": 234,
+        "WarInherited": 235,
+        "WarAllyInherited": 236,
+        "WarConcordInvalidates": 237,
+        "WarRetracted": 238,
+        "WarRetractedByConcord": 239,
+        "WarInvalid": 240,
+    }
+)
