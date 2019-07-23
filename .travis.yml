@@ -1,8 +1,8 @@
 language: python
 python:
-- '3.6'
+- '3.7'
 env:
-- TOXENV=python3.6
+- TOXENV=python3.7
 - TOXENV=pylint
 - TOXENV=flake8
 before_install:
@@ -26,7 +26,7 @@ deploy:
   on:
     tags: true
     repo: ccpgames/eve-glue
-    condition: "$TOXENV = python3.6"
+    condition: "$TOXENV = python3.7"
 - provider: releases
   api_key:
     secure: Jlovlm5bAB94gikGdl5GPlAe1waLSBBfCOBOmjP8nawWQQLXXt2REHyYzPfVt0EkyA2ZQo3MwtdvPnGLUy2UOg+043mUvnyJvcR4QsMdXuJJXNvE4g38L1zs3tGHOTcslhPEZdpJT5wJomMcYRuR0DIAlKa5PgunYVTU38ezsr4nMmtQNg3C7eENZSjU7rYGAWGOtePljOAC4P8xM8p9fYdkdjnJ/cxX4vCvJDSBdbYq/Cmffv91N5IElWVoqL7W2GT0WAmdMD62C0/TR6kq1GzODLwGSF60cImB192MWeRqaknF+a5ctUTu89zLgVjoB0pGstg7+Yyoxtf5WqU/GZ/Te7aLbnosNm8SoqzghkCfppn3rZBjJ14L1y5efJ+/6QhpeJyGW3KotMDl1rkuCo/F9K4EXSpMk/lK92ogT1VRvjWtqZy2/jI0zmheSihfbdctajWBqSK/T6XyFTbqnGX40mB/hDqWZqIkffoEnSLnUFjujALRnzV9DXJP/ZTNbsIq5x/uCfer13riIhXT2D6tROFx9IzLVQhjM+Tbbsv7ZuJ4VbadCGK6eyFp5FrqnmQTL7mGXt8yjI7ClSZXYabgiIGPe5QFdnMA2WDDhRWBH0zmpFlkCg/ACbKrakccOTTW7adngv6lsFf2WhYxevMXjPxl+FonC5aYhQ4gllA=
@@ -36,4 +36,4 @@ deploy:
   on:
     tags: true
     repo: ccpgames/eve-glue
-    condition: "$TOXENV = python3.6"
+    condition: "$TOXENV = python3.7"
