@@ -298,9 +298,11 @@ class CorporationLocationFlagEnumV1(enum.Enum):
 class FittingLocationFlagEnumV1(enum.Enum):
     """
     Maps location names to IDs.
+
     Only contains flags that are valid
     in a ship or structure fitting.
     """
+
     Invalid = None
     Cargo = 5
     LoSlot0 = 11

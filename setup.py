@@ -1,13 +1,14 @@
 """EVE Glue."""
 
-
+import os
 from setuptools import setup, find_packages
 from setuphelpers import long_description, git_version, test_command
 
 
 setup(
     name="eve-glue",
-    version=git_version(),
+    version="{}{}".format(git_version(), os.getenv(
+        "PACKAGE_VERSION_SUFFIX", "")),
     description="eve-glue",
     long_description=long_description(),
     cmdclass=test_command(cover="eve_glue"),
