@@ -240,3 +240,12 @@ NotificationTypeEnumV6 = new_from_enum(  # pylint: disable=invalid-name
         "WarInvalid": 240,
     }
 )
+
+NotificationTypeEnumV7 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV7",
+    NotificationTypeEnumV6,
+    add={
+        "MercOfferRetractedMsg": 241,
+        "OfferToAllyRetracted": 242,
+    }
+)
