@@ -4,11 +4,10 @@ import os
 from setuptools import setup, find_packages
 from setuphelpers import long_description, git_version, test_command
 
-
 setup(
     name="eve-glue",
-    version="{}{}".format(git_version(), os.getenv(
-        "PACKAGE_VERSION_SUFFIX", "")),
+    version="{}{}".format(git_version(), os.getenv("PACKAGE_VERSION_SUFFIX",
+                                                   "")),
     description="eve-glue",
     long_description=long_description(),
     cmdclass=test_command(cover="eve_glue"),
@@ -16,7 +15,13 @@ setup(
     author="Team Tech Co",
     author_email="teamtechco@ccpgames.com",
     url="https://github.com/ccpgames/eve-glue",
+    dependency_links=[
+        'https://pypi.evetech.net/pypi/eveproto',
+    ],
     setup_requires=["setuphelpers"],
+    tests_require=[
+        'eveproto>=0.1.80',
+    ],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
