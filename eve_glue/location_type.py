@@ -2,7 +2,7 @@
 
 
 def resolve_location_type_enum(location_id):
-    """Resolve the location itemID ID to a type name."""
+    """Resolve the location item ID to its type name."""
 
     if 30000000 <= location_id <= 39999999:
         return "solar_system"
