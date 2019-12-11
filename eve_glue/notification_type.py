@@ -249,3 +249,13 @@ NotificationTypeEnumV7 = new_from_enum(  # pylint: disable=invalid-name
         "OfferToAllyRetracted": 242,
     }
 )
+
+NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV8",
+    NotificationTypeEnumV7,
+    add={
+        "RaffleCreated": 243,
+        "RaffleExpired": 244,
+        "RaffleFinished": 245,
+    }
+)
