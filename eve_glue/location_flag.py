@@ -355,6 +355,7 @@ CorporationLocationFlagEnumV2 = new_from_enum(  # pylint: disable=invalid-name
     remove=["HiddenModifers", "SubsystemBay"],
     add={
         "HiddenModifiers": 156,
-        "SubSystemBay": 177
+        "SubSystemBay": 177,
+        "FrigateEscapeBay": 179,
     }
 )
