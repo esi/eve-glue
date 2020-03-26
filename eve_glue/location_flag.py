@@ -175,6 +175,15 @@ class PersonalLocationFlagEnumV2(enum.Enum):
     HangarAll = 1000
 
 
+PersonalLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
+    "PersonalLocationFlagEnumV3",
+    PersonalLocationFlagEnumV2,
+    add={
+        "FrigateEscapeBay": 179,
+    }
+)
+
+
 class CorporationLocationFlagEnumV1(enum.Enum):
     """From inventorycommon/const.py:75."""
 
@@ -356,6 +365,14 @@ CorporationLocationFlagEnumV2 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "HiddenModifiers": 156,
         "SubSystemBay": 177,
+        "FrigateEscapeBay": 179,
+    }
+)
+
+CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
+    "CorporationLocationFlagEnumV3",
+    CorporationLocationFlagEnumV2,
+    add={
         "FrigateEscapeBay": 179,
     }
 )
