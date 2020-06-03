@@ -257,5 +257,6 @@ NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
         "RaffleCreated": 243,
         "RaffleExpired": 244,
         "RaffleFinished": 245,
+        "StructureImpendingAbandonmentAssetsAtRisk": 249
     }
 )
