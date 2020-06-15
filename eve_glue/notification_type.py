@@ -1,6 +1,5 @@
 """Helpers for character notifications."""
 
-
 import enum
 
 from eve_glue.enums import new_from_enum
@@ -197,8 +196,7 @@ NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "StructuresJobsPaused": 210,
         "StructuresJobsCancelled": 211,
-    }
-)
+    })
 
 NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV4",
@@ -206,8 +204,7 @@ NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "CombatOperationFinished": 1013,
         "IndustryOperationFinished": 1014
-    }
-)
+    })
 
 NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV5",
@@ -247,8 +244,7 @@ NotificationTypeEnumV7 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "MercOfferRetractedMsg": 241,
         "OfferToAllyRetracted": 242,
-    }
-)
+    })
 
 NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV8",
@@ -257,6 +253,7 @@ NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
         "RaffleCreated": 243,
         "RaffleExpired": 244,
         "RaffleFinished": 245,
+        "WarEndedHqSecurityDrop": 246,
         "StructureImpendingAbandonmentAssetsAtRisk": 249
     }
 )
