@@ -88,6 +88,7 @@ class PersonalLocationFlagEnumV1(enum.Enum):
     FighterTube4 = 163
     BoosterBay = 176
     SubSystemBay = 177
+    QuantumCoreRoom = 180
 
 
 class PersonalLocationFlagEnumV2(enum.Enum):
