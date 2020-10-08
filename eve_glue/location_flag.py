@@ -88,7 +88,6 @@ class PersonalLocationFlagEnumV1(enum.Enum):
     FighterTube4 = 163
     BoosterBay = 176
     SubSystemBay = 177
-    QuantumCoreRoom = 180
 
 
 class PersonalLocationFlagEnumV2(enum.Enum):
@@ -367,6 +366,7 @@ CorporationLocationFlagEnumV2 = new_from_enum(  # pylint: disable=invalid-name
         "HiddenModifiers": 156,
         "SubSystemBay": 177,
         "FrigateEscapeBay": 179,
+        "QuantumCoreRoom": 180,
     }
 )
 
@@ -375,5 +375,6 @@ CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     CorporationLocationFlagEnumV2,
     add={
         "FrigateEscapeBay": 179,
+        "QuantumCoreRoom": 180,
     }
 )
