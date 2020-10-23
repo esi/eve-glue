@@ -250,10 +250,16 @@ NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV8",
     NotificationTypeEnumV7,
     add={
+        "InvasionSystemStart": 227,
+        "InvasionCompletedMsg": 228,
         "RaffleCreated": 243,
         "RaffleExpired": 244,
         "RaffleFinished": 245,
         "WarEndedHqSecurityDrop": 246,
-        "StructureImpendingAbandonmentAssetsAtRisk": 249
+        "MissionCanceledTriglavian": 247,
+        "AgentRetiredTrigravian": 248,
+        "StructureImpendingAbandonmentAssetsAtRisk": 249,
+        "OfficeLeaseCanceledInsufficientStandings": 250,
+        "ContractRegionChangedToPochven": 251,
     }
 )
