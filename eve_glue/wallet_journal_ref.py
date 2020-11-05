@@ -139,7 +139,8 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     JournalRefTypeEnumV3,
     add={
         "skill_purchase": 141,
-        "item_trader_payment": 142
+        "item_trader_payment": 142,
+        "ess_escrow_transfer": 155,
     }
 )
 

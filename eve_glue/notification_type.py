@@ -203,7 +203,8 @@ NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     NotificationTypeEnumV3,
     add={
         "CombatOperationFinished": 1013,
-        "IndustryOperationFinished": 1014
+        "IndustryOperationFinished": 1014,
+        "ESSMainBankLink": 1015,
     })
 
 NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
