@@ -264,3 +264,12 @@ NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
         "ContractRegionChangedToPochven": 251,
     }
 )
+
+NotificationTypeEnumV9 = new_from_enum(  # pylint: disable=invalid-name
+    "NotificationTypeEnumV9",
+    NotificationTypeEnumV8,
+    add={
+        "NotificationTypeExpertSystemExpiryImminent": 252,
+        "NotificationTypeExpertSystemExpired": 253,
+    }
+)
