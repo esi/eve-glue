@@ -269,7 +269,7 @@ NotificationTypeEnumV9 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV9",
     NotificationTypeEnumV8,
     add={
-        "NotificationTypeExpertSystemExpiryImminent": 252,
-        "NotificationTypeExpertSystemExpired": 253,
+        "ExpertSystemExpiryImminent": 252,
+        "ExpertSystemExpired": 253,
     }
 )
