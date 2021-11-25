@@ -138,9 +138,21 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     "JournalRefTypeEnumV4",
     JournalRefTypeEnumV3,
     add={
+        "external_trade_freeze": 136,
+        "external_trade_thaw": 137,
+        "external_trade_delivery": 138,
+        "season_challenge_reward": 139,
         "skill_purchase": 141,
         "item_trader_payment": 142,
+        "flux_ticket_sale": 143,  # hypernet ref group
+        "flux_payout": 144,  # hypernet ref group
+        "flux_tax": 145,  # hypernet ref group
+        "flux_ticket_repayment": 146,  # hypernet ref group
+        "redeemed_isk_token": 147,
+        "daily_challenge_reward": 148,
+        "market_provider_tax": 149,
         "ess_escrow_transfer": 155,
+        "milestone_reward_payment": 156,
     }
 )
 
