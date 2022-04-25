@@ -172,6 +172,7 @@ class PersonalLocationFlagEnumV2(enum.Enum):
     BoosterBay = 176
     SubSystemBay = 177
     FrigateEscapeBay = 179
+    SpecializedIceHold = 181
     HangarAll = 1000
 
 
