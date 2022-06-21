@@ -180,6 +180,9 @@ PersonalLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     PersonalLocationFlagEnumV2,
     add={
         "FrigateEscapeBay": 179,
+        "StructureDeedBay": 180,
+        "SpecializedIceHold": 181,
+        "SpecializedAsteroidHold": 182,
     }
 )
 
@@ -375,5 +378,8 @@ CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     CorporationLocationFlagEnumV2,
     add={
         "FrigateEscapeBay": 179,
+        "StructureDeedBay": 180,
+        "SpecializedIceHold": 181,
+        "SpecializedAsteroidHold": 182,
     }
 )
