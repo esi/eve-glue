@@ -274,8 +274,8 @@ NotificationTypeEnumV9 = new_from_enum(  # pylint: disable=invalid-name
     }
 )
 
-NotificationTypeEnumViridian = new_from_enum(
-    "NotificationTypeEnumViridian",
+NotificationTypeEnumV21_05_2298928 = new_from_enum(
+    "NotificationTypeEnumV21_05_2298928",
     NotificationTypeEnumV9,
     add={
         "StructurePaintPurchased": 254,

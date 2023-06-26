@@ -393,8 +393,8 @@ CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     }
 )
 
-CorporationLocationFlagEnumViridian = new_from_enum(
-    "CorporationLocationFlagEnumViridian",
+CorporationLocationFlagEnumV21_05_2298928 = new_from_enum(
+    "CorporationLocationFlagEnumV21_05_2298928",
     CorporationLocationFlagEnumV3,
     add={
         "MobileDepotHold": 183,
