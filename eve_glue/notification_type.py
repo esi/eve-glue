@@ -273,3 +273,14 @@ NotificationTypeEnumV9 = new_from_enum(  # pylint: disable=invalid-name
         "ExpertSystemExpired": 253,
     }
 )
+
+NotificationTypeEnumV10 = new_from_enum(
+    "NotificationTypeEnumV10",
+    NotificationTypeEnumV9,
+    add={
+        "StructurePaintPurchased": 254,
+        "CorporationGoalCreated": 260,
+        "CorporationGoalClosed": 261,
+        "CorporationGoalCompleted": 262,
+    }
+)
