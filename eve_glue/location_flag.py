@@ -186,8 +186,8 @@ PersonalLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     }
 )
 
-PersonalLocationFlagEnumViridian = new_from_enum(
-    "PersonalLocationFlagEnumViridian",
+PersonalLocationFlagEnumV4 = new_from_enum(
+    "PersonalLocationFlagEnumV4",
     PersonalLocationFlagEnumV3,
     add={
         "MobileDepotHold": 183,
