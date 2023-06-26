@@ -186,6 +186,15 @@ PersonalLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     }
 )
 
+PersonalLocationFlagEnumViridian = new_from_enum(
+    "PersonalLocationFlagEnumViridian",
+    PersonalLocationFlagEnumV3,
+    add={
+        "MobileDepotHold": 183,
+        "CorporationGoalDeliveries": 184,
+    }
+)
+
 
 class CorporationLocationFlagEnumV1(enum.Enum):
     """From inventorycommon/const.py:75."""
@@ -381,5 +390,14 @@ CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
         "StructureDeedBay": 180,
         "SpecializedIceHold": 181,
         "SpecializedAsteroidHold": 182,
+    }
+)
+
+CorporationLocationFlagEnumViridian = new_from_enum(
+    "CorporationLocationFlagEnumViridian",
+    CorporationLocationFlagEnumV3,
+    add={
+        "MobileDepotHold": 183,
+        "CorporationGoalDeliveries": 184,
     }
 )
