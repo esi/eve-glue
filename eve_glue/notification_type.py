@@ -196,7 +196,8 @@ NotificationTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "StructuresJobsPaused": 210,
         "StructuresJobsCancelled": 211,
-    })
+    },
+)
 
 NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV4",
@@ -205,7 +206,8 @@ NotificationTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "CombatOperationFinished": 1013,
         "IndustryOperationFinished": 1014,
         "ESSMainBankLink": 1015,
-    })
+    },
+)
 
 NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV5",
@@ -216,7 +218,7 @@ NotificationTypeEnumV5 = new_from_enum(  # pylint: disable=invalid-name
         "WarHQRemovedFromSpace": 223,
         "CorpWarDeclaredV2": 224,
         "AllianceWarDeclaredV2": 225,
-    }
+    },
 )
 
 NotificationTypeEnumV6 = new_from_enum(  # pylint: disable=invalid-name
@@ -236,7 +238,7 @@ NotificationTypeEnumV6 = new_from_enum(  # pylint: disable=invalid-name
         "WarRetracted": 238,
         "WarRetractedByConcord": 239,
         "WarInvalid": 240,
-    }
+    },
 )
 
 NotificationTypeEnumV7 = new_from_enum(  # pylint: disable=invalid-name
@@ -245,7 +247,8 @@ NotificationTypeEnumV7 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "MercOfferRetractedMsg": 241,
         "OfferToAllyRetracted": 242,
-    })
+    },
+)
 
 NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
     "NotificationTypeEnumV8",
@@ -262,7 +265,7 @@ NotificationTypeEnumV8 = new_from_enum(  # pylint: disable=invalid-name
         "StructureImpendingAbandonmentAssetsAtRisk": 249,
         "OfficeLeaseCanceledInsufficientStandings": 250,
         "ContractRegionChangedToPochven": 251,
-    }
+    },
 )
 
 NotificationTypeEnumV9 = new_from_enum(  # pylint: disable=invalid-name
@@ -271,7 +274,7 @@ NotificationTypeEnumV9 = new_from_enum(  # pylint: disable=invalid-name
     add={
         "ExpertSystemExpiryImminent": 252,
         "ExpertSystemExpired": 253,
-    }
+    },
 )
 
 NotificationTypeEnumV10 = new_from_enum(
@@ -282,5 +285,14 @@ NotificationTypeEnumV10 = new_from_enum(
         "CorporationGoalCreated": 260,
         "CorporationGoalClosed": 261,
         "CorporationGoalCompleted": 262,
-    }
+    },
+)
+
+NotificationTypeEnumV10 = new_from_enum(
+    "NotificationTypeEnumV11",
+    NotificationTypeEnumV10,
+    add={
+        "CorporationGoalNameChange": 263,
+        "CorporationLeft": 270,
+    },
 )
