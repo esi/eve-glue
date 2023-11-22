@@ -288,7 +288,7 @@ NotificationTypeEnumV10 = new_from_enum(
     },
 )
 
-NotificationTypeEnumV10 = new_from_enum(
+NotificationTypeEnumV11 = new_from_enum(
     "NotificationTypeEnumV11",
     NotificationTypeEnumV10,
     add={
