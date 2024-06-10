@@ -93,7 +93,9 @@ class JournalRefTypeEnumV2(enum.Enum):
     sovereignity_bill = 91
     bounty_prize_corporation_tax = 92
     agent_mission_reward_corporation_tax = 93  # pylint: disable=invalid-name
-    agent_mission_time_bonus_reward_corporation_tax = 94  # noqa pylint: disable=invalid-name
+    agent_mission_time_bonus_reward_corporation_tax = (  # noqa pylint: disable=invalid-name
+        94
+    )
     upkeep_adjustment_fee = 95
     planetary_import_tax = 96
     planetary_export_tax = 97
@@ -130,9 +132,10 @@ JournalRefTypeEnumV3 = new_from_enum(  # pylint: disable=invalid-name
     "JournalRefTypeEnumV3",
     JournalRefTypeEnumV2,
     add={
-        "structure_gate_jump": 140
-    }
+        "structure_gate_jump": 140,
+    },
 )
+
 
 JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
     "JournalRefTypeEnumV4",
@@ -153,7 +156,28 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "market_provider_tax": 149,
         "ess_escrow_transfer": 155,
         "milestone_reward_payment": 156,
-    }
+    },
+)
+
+
+JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
+    "JournalRefTypeEnumV4",
+    JournalRefTypeEnumV3,
+    add={
+        "under_construction": 166,
+        "allignment_based_gate_toll": 168,
+        "project_payouts": 170,
+        "insurgency_corruption_contribution_reward": 172,
+        "insurgency_suppression_contribution_reward": 173,
+        "daily_goal_payouts": 174,
+        "daily_goal_payouts_tax": 175,
+        "cosmetic_market_component_item_purchase": 178,
+        "cosmetic_market_skin_sale_broker_fee": 179,
+        "cosmetic_market_skin_purchase": 180,
+        "cosmetic_market_skin_sale": 181,
+        "cosmetic_market_skin_sale_tax": 182,
+        "cosmetic_market_skin_transaction": 183,
+    },
 )
 
 
