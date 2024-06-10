@@ -40,6 +40,7 @@ class CorpRolesEnum(enum.Enum):
     Account_Take_6 = 4294967296
     Account_Take_7 = 8589934592
     Diplomat = 17179869184
+    Brand_Manager = 34359738368
     Config_Equipment = 2199023255552
     Container_Take_1 = 4398046511104
     Container_Take_2 = 8796093022208
