@@ -199,7 +199,7 @@ PersonalLocationFlagEnumV5 = new_from_enum(
     "PersonalLocationFlagEnumV5",
     PersonalLocationFlagEnumV4,
     add={
-        "InfrastructureHangar": 183,
+        "InfrastructureHangar": 185,
         "MoonMaterialBay": 186,
     },
 )
@@ -415,7 +415,7 @@ CorporationLocationFlagEnumV5 = new_from_enum(
     "CorporationLocationFlagEnumV5",
     CorporationLocationFlagEnumV4,
     add={
-        "InfrastructureHangar": 183,
+        "InfrastructureHangar": 185,
         "MoonMaterialBay": 186,
     },
 )
