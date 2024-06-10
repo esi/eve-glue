@@ -1,6 +1,5 @@
 """Helpers for location IDs."""
 
-
 import enum
 
 from eve_glue.enums import new_from_enum
@@ -183,7 +182,7 @@ PersonalLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
         "StructureDeedBay": 180,
         "SpecializedIceHold": 181,
         "SpecializedAsteroidHold": 182,
-    }
+    },
 )
 
 PersonalLocationFlagEnumV4 = new_from_enum(
@@ -192,7 +191,17 @@ PersonalLocationFlagEnumV4 = new_from_enum(
     add={
         "MobileDepotHold": 183,
         "CorporationGoalDeliveries": 184,
-    }
+    },
+)
+
+
+PersonalLocationFlagEnumV5 = new_from_enum(
+    "PersonalLocationFlagEnumV5",
+    PersonalLocationFlagEnumV4,
+    add={
+        "InfrastructureHangar": 183,
+        "MoonMaterialBay": 186,
+    },
 )
 
 
@@ -379,7 +388,7 @@ CorporationLocationFlagEnumV2 = new_from_enum(  # pylint: disable=invalid-name
         "SubSystemBay": 177,
         "FrigateEscapeBay": 179,
         "QuantumCoreRoom": 180,
-    }
+    },
 )
 
 CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
@@ -390,7 +399,7 @@ CorporationLocationFlagEnumV3 = new_from_enum(  # pylint: disable=invalid-name
         "StructureDeedBay": 180,
         "SpecializedIceHold": 181,
         "SpecializedAsteroidHold": 182,
-    }
+    },
 )
 
 CorporationLocationFlagEnumV4 = new_from_enum(
@@ -399,5 +408,14 @@ CorporationLocationFlagEnumV4 = new_from_enum(
     add={
         "MobileDepotHold": 183,
         "CorporationGoalDeliveries": 184,
-    }
+    },
+)
+
+CorporationLocationFlagEnumV5 = new_from_enum(
+    "CorporationLocationFlagEnumV5",
+    CorporationLocationFlagEnumV4,
+    add={
+        "InfrastructureHangar": 183,
+        "MoonMaterialBay": 186,
+    },
 )
