@@ -296,3 +296,13 @@ NotificationTypeEnumV11 = new_from_enum(
         "CorporationLeft": 270,
     },
 )
+
+NotificationTypeEnumV12 = new_from_enum(
+    "NotificationTypeEnumV12",
+    NotificationTypeEnumV11,
+    add={
+        "LPAutoRedeemed": 275,
+        "SPAutoRedeemed": 276,
+        "SkinSequencingCompleted": 280,
+    },
+)
