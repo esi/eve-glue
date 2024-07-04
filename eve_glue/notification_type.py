@@ -304,5 +304,10 @@ NotificationTypeEnumV12 = new_from_enum(
         "LPAutoRedeemed": 275,
         "SPAutoRedeemed": 276,
         "SkinSequencingCompleted": 280,
+        "SkyhookOnline": 281,
+        "SkyhookLostShields": 282,
+        "SkyhookUnderAttack": 283,
+        "SkyhookDestroyed": 284,
+        "SkyhookDeployed": 285,
     },
 )
