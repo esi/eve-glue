@@ -156,14 +156,6 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "market_provider_tax": 149,
         "ess_escrow_transfer": 155,
         "milestone_reward_payment": 156,
-    },
-)
-
-
-JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
-    "JournalRefTypeEnumV4",
-    JournalRefTypeEnumV3,
-    add={
         "under_construction": 166,
         "allignment_based_gate_toll": 168,
         "project_payouts": 170,
