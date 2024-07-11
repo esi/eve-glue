@@ -1,6 +1,5 @@
 """Helpers for corporation roles."""
 
-
 import enum
 
 from eve_glue.bitmask import mask_list
@@ -10,6 +9,9 @@ class CorpRolesEnum(enum.Enum):
     """Map of role name to role bit."""
 
     Director = 1
+    Deliveries_Take = 2
+    Deliveries_Query = 4
+    Deliveries_Container_Take = 8
     Personnel_Manager = 128
     Accountant = 256
     Security_Officer = 512
@@ -38,6 +40,7 @@ class CorpRolesEnum(enum.Enum):
     Account_Take_6 = 4294967296
     Account_Take_7 = 8589934592
     Diplomat = 17179869184
+    Brand_Manager = 34359738368
     Config_Equipment = 2199023255552
     Container_Take_1 = 4398046511104
     Container_Take_2 = 8796093022208
