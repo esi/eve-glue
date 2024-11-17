@@ -309,6 +309,8 @@ NotificationTypeEnumV12 = new_from_enum(
         "SkyhookUnderAttack": 283,
         "SkyhookDestroyed": 284,
         "SkyhookDeployed": 285,
+        "MercenaryDenReinforced": 286,
+        "DailyItemRewardAutoClaimed": 6013,
         "StructureLowReagentsAlert": 6040,
         "StructureNoReagentsAlert": 6041,
     },
