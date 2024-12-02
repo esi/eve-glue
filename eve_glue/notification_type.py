@@ -301,6 +301,9 @@ NotificationTypeEnumV12 = new_from_enum(
     "NotificationTypeEnumV12",
     NotificationTypeEnumV11,
     add={
+        "CorporationGoalNameChange": 263,
+        "CorporationGoalExpired": 264,
+        "CorporationGoalLimitReached": 265,
         "LPAutoRedeemed": 275,
         "SPAutoRedeemed": 276,
         "SkinSequencingCompleted": 280,
