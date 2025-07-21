@@ -177,7 +177,7 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "freelance_jobs_reward": 189,
         "freelance_jobs_escrow_refund": 190,
         "freelance_jobs_reward_corporation_tax": 191,
-        "gm_cash_transfer": 192,
+        "gm_plex_fee_refund": 192,
     },
 )
 
