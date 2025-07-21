@@ -169,6 +169,15 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "cosmetic_market_skin_sale": 181,
         "cosmetic_market_skin_sale_tax": 182,
         "cosmetic_market_skin_transaction": 183,
+        "skyhook_claim_fee": 184,
+        "air_career_program_reward": 185,
+        "freelance_jobs_duration_fee": 186,
+        "freelance_jobs_broadcasting_fee": 187,
+        "freelance_jobs_reward_escrow": 188,
+        "freelance_jobs_reward": 189,
+        "freelance_jobs_escrow_refund": 190,
+        "freelance_jobs_reward_corporation_tax": 191,
+        "gm_cash_transfer": 192,
     },
 )
 
