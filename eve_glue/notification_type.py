@@ -314,6 +314,7 @@ NotificationTypeEnumV12 = new_from_enum(
         "MercenaryDenReinforced": 286,
         "MercenaryDenAttacked": 287,
         "MercenaryDenNewMTO": 288,
+        "FacWarDirectEnlistmentRevoked": 289,
         "FreelanceProjectClosed": 290,
         "FreelanceProjectCompleted": 292,
         "FreelanceProjectLimitReached": 293,
