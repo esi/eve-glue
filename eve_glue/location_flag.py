@@ -202,6 +202,7 @@ PersonalLocationFlagEnumV5 = new_from_enum(
         "InfrastructureHangar": 185,
         "MoonMaterialBay": 186,
         "CapsuleerDeliveries": 187,
+        "ExpeditionHold": 188,
     },
 )
 
@@ -419,5 +420,6 @@ CorporationLocationFlagEnumV5 = new_from_enum(
         "InfrastructureHangar": 185,
         "MoonMaterialBay": 186,
         "CapsuleerDeliveries": 187,
+        "ExpeditionHold": 188,
     },
 )
