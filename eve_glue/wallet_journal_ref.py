@@ -178,6 +178,13 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "freelance_jobs_escrow_refund": 190,
         "freelance_jobs_reward_corporation_tax": 191,
         "gm_plex_fee_refund": 192,
+        "market_security_tax": 194,
+        "npc_bounty_security_tax": 195,
+        "industry_security_tax": 196,
+        "agent_mission_security_tax": 197,
+        "achievement_milestone_reward": 198,
+        "achievement_category_milestone_reward": 199,
+        "campaign_objective_isk_reward": 200,
     },
 )
 
