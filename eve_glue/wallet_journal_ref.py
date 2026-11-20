@@ -185,6 +185,7 @@ JournalRefTypeEnumV4 = new_from_enum(  # pylint: disable=invalid-name
         "achievement_milestone_reward": 198,
         "achievement_category_milestone_reward": 199,
         "campaign_objective_isk_reward": 200,
+        "campaign_objective_isk_reward_tax": 201,
     },
 )
 
